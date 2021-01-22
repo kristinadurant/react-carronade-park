@@ -4,11 +4,12 @@ import Background from '../images/IMG_1654.jpg';
 const Banner = ({image, text}) => {
     return (
         <>
-            <div className="banner-image" style={{backgroundImage: `url(${Background})`}}>
+            <div>
+                <div className="banner-image" style={{backgroundImage: `url(${Background})`}}></div>
             </div>
-            <div className="banner-text">
+            <h1 className="banner-text">
                 {text}
-            </div>
+            </h1>
         </>
     )
 }
