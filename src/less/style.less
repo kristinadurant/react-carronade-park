@@ -1,0 +1,83 @@
+@cp-grey: #4d6a79;
+@cp-green: #85d341;
+@color: #444;
+@padd-s: 2rem;
+* {
+  color: @color;
+  text-decoration: none;
+}
+body {
+  min-height: 100vh;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: auto;
+}
+header + * {
+  min-height: 90vh;
+}
+/*=============================
+    HEADER
+  ==============================*/
+header ul {
+  display: flex;
+}
+/*=============================
+    FOOTER
+  ==============================*/
+footer {
+  background-color: @color;
+  padding: @padd-s;
+  margin-top: 5%;
+}
+/*=============================
+    BANNER
+  ==============================*/
+.banner-image {
+  height: 30vw;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.banner-text {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+  padding: @padd-s;
+}
+/*=============================
+    AMENITIES
+  ==============================*/
+#amenities-page .inner {
+  display: flex;
+}
+#amenities-page .inner > * {
+  width: 50%;
+}
+/*=============================
+    NEIGHBORHOOD
+  ==============================*/
+#neighborhood-page .tabs {
+  display: flex;
+  justify-content: space-between;
+}
+#neighborhood-page .tabs button {
+  text-transform: uppercase;
+}
+.map-container {
+  overflow: hidden;
+}
+.map-container > * {
+  margin-top: -60px;
+}
