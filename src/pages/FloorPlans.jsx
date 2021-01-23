@@ -4,7 +4,7 @@ import Banner from '../components/Banner';
 const FloorPlans = () => {
     return (
         <div id="floor-plans-page">
-            <Banner text={'Floor Plans'}/>
+            <Banner text={'Floor Plans'} image={'https://res.cloudinary.com/carronadepark/image/upload/v1611285585/Gallery/IMG_1716_Large_s75upg.jpg'}/>
             <section id='floor-plans-blocks' className="inner">
                 <div>
                     <div className="img-wrapper">

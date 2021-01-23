@@ -5,6 +5,9 @@
   padding: 0;
   text-align: center;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5em;
+  font-size: 1rem;
 }
 body {
   min-height: 100vh;
@@ -34,6 +37,25 @@ header + * {
 /*=============================
     HEADER
   ==============================*/
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 5rem;
+}
+.logo span {
+  font-family: "Satisfy", cursive;
+  font-size: 1.5rem;
+  text-align: left;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 1;
+  display: block;
+}
+.logo span:first-child {
+  margin-left: -0.3rem;
+}
 header .inner {
   display: flex;
   justify-content: space-between;
@@ -108,11 +130,9 @@ footer {
 /*=============================
     AMENITIES
 ==============================*/
-#amenities-page .inner {
-  display: flex;
-}
-#amenities-page .inner > * {
-  width: 50%;
+#amenities-page .react-multi-carousel-list {
+  max-width: 800px;
+  margin: auto;
 }
 .amenities-list li {
   margin-bottom: 0.5em;

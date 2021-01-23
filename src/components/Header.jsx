@@ -6,8 +6,12 @@ const Header = () => {
     return (
         <header>
             <div className="inner">
-                <Link to='/'>
+                <Link to='/' className="logo">
                     <img src={logo} alt="Carronade Park Logo"/>
+                    <p>
+                        <span>Carronade</span> 
+                        <span>Park</span>
+                    </p>
                 </Link>
             <nav>
                     <ul>

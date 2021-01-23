@@ -26,6 +26,12 @@ const MapCarousel = ({ markers }) => {
     <div className="inner">
       <Carousel
         showDots
+        keyBoardControl
+        infinite
+        autoPlay
+        autoPlaySpeed={3000}
+        customTransition="all 1s"
+        transitionDuration={1000}
         responsive={responsive}
       >
         {markers.map((marker, index) => {
@@ -33,7 +39,11 @@ const MapCarousel = ({ markers }) => {
               <div key={index}>
                 <p>{marker.name}</p>
                 <p>{marker.description}</p>
-                <p>{marker.distance}</p>
+                <p>
+                  <span>{marker.distance}</span>                         
+                  {marker.bike && <span>{marker.bike}<i class="fas fa-biking"></i></span>}
+                  {marker.car && <span>{marker.car}<i class="fas fa-car-side"></i></span>}
+                </p>
               </div>
           );
         })}

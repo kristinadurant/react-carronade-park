@@ -1,8 +1,8 @@
 import React from 'react';
 import MapCarousel from './MapCarousel';
 
-const MapTab = ({ map, active }) => {
-    console.log(active);
+const MapTab = ({ map }) => {
+
     return (
         <>
             <div className="map-container">

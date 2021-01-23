@@ -1,6 +1,7 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import amenities from '../data/AmenitiesGallery';
 
 const responsive = {
   desktop: {
@@ -22,33 +23,21 @@ const responsive = {
 
 const AmenitiesCarousel = () => {
 
-    const amenities = [
-        {
-            descripiton: 'amenity',
-            image: 'https://res.cloudinary.com/carronadepark/image/upload/v1611285585/Gallery/IMG_1715_Large_otojvp.jpg'
-        },
-        {
-            descripiton: 'amenity',
-            image: 'https://res.cloudinary.com/carronadepark/image/upload/v1611285585/Gallery/IMG_1716_Large_s75upg.jpg'
-        },
-        {
-            descripiton: 'amenity',
-            image: 'https://res.cloudinary.com/carronadepark/image/upload/v1611285585/Gallery/IMG_1653_Large_psjvht.jpg'
-        },
-        {
-            descripiton: 'amenity',
-            image: 'https://res.cloudinary.com/carronadepark/image/upload/v1611285586/Gallery/IMG_1654_Large_wey2ri.jpg'
-        }
-    ]
     return (
-        <Carousel
+      <Carousel
         showDots
+        keyBoardControl
+        infinite
+        autoPlay
+        autoPlaySpeed={5000}
+        customTransition="all 1s"
+        transitionDuration={1000}
         responsive={responsive}
       >
         {amenities.map((item, index) => {
           return (
               <div key={index}>
-                  <img src={item.image}/>
+                  <img src={item.image} alt={item.description}/>
               </div>
           );
         })}

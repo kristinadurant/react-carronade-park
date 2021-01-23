@@ -2,6 +2,7 @@ import './App.css';
 import './css/style.css';
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import ScrollToTop from './ScrollToTop';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -13,6 +14,7 @@ import Neighborhood from './pages/Neighborhood';
 const App = () => {
   return (
     <BrowserRouter >
+      <ScrollToTop />
       <Header />
       <Switch>
         <Route exact path='/' component={Home} />
