@@ -18,8 +18,17 @@ const Header = () => {
                         <li><Link to='/floor-plans'>FLOOR PLANS</Link></li>
                         <li><Link to='/amenities'>AMENITIES</Link></li>
                         <li><Link to='/neighborhood'>NEIGHBORHOOD</Link></li>
-                        <li><Link to='/gallery'>GALLERY</Link></li>                
-                        <li><a href='https://app.propertyware.com/pw/portals/fortmeigsaptsllc/tenant.action'>RESIDENT</a></li>
+                        <li><Link to='/gallery'>GALLERY</Link></li>
+                        <li><Link to='/schedule-tour'>SCHEDULE A TOUR</Link></li>             
+                        <li>
+                            <a 
+                                href='https://app.propertyware.com/pw/portals/fortmeigsaptsllc/tenant.action' 
+                                target="_blank" 
+                                rel="noreferrer"
+                            >
+                                RESIDENT
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>

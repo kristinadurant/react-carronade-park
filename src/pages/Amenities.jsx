@@ -9,6 +9,7 @@ const Amenities = () => {
         <div id="amenities-page">
             <Banner text={'Modern Amenities'} image={'https://res.cloudinary.com/carronadepark/image/upload/v1611285586/Gallery/IMG_1654_Large_wey2ri.jpg'}/>
             <div className="inner">
+                <p>Modern Open Floor Plan, Granite Countertops, Garage Included, Full Size Washer and Dryer Included!</p>
                 <AmenitiesCarousel />
                 <ul className="amenities-list">
                     {amenitiesList.map((item, index) => {

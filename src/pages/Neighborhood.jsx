@@ -11,6 +11,9 @@ const Neighborhood = () => {
         <div id="neighborhood-page">
             <Banner text={'explore your neighborhood'} image={'https://res.cloudinary.com/carronadepark/image/upload/v1611351435/Neighborhood/Poster_2_Large_1_maemqb.jpg'}/>
             <div className="inner">
+                <p>Dining, entertainment, shopping, schools are all nearby with Fort Meigs at Levis Apartments. 
+                    In Perrysburg, you will find a combination of modern luxuries in a convenient location 
+                    providing easy access to major interstates. Look no further for Perrysburg apartments, your new location to call Home</p>
                 <ul className="tabs">
                     {categories.map((item) => (
                         <li key={item}><button onClick={()=> setTab(item)}>{item}</button></li>

@@ -24,6 +24,12 @@ button {
   background-color: transparent;
   border: none;
 }
+input[type="radio"] {
+  cursor: pointer;
+}
+.button {
+  cursor: pointer;
+}
 a {
   display: block;
 }
@@ -77,6 +83,9 @@ footer {
   background-color: #1a1a1a;
   padding: 2rem;
   margin-top: 5%;
+}
+footer * {
+  color: white;
 }
 /*=============================
     BANNER
@@ -211,6 +220,20 @@ footer {
 .map-container > * {
   margin-top: -60px;
 }
+/*=============================
+    SCHEDULE A TOUR
+  ==============================*/
+#tour-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+fieldset {
+  border: none;
+}
+/*=============================
+    RESPONSIVE DESIGN
+==============================*/
 @media only screen and (max-width: 1443px) {
   .grid-container {
     height: 1400px;

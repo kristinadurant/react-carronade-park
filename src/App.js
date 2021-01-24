@@ -10,6 +10,7 @@ import FloorPlans from './pages/FloorPlans';
 import Amenities from './pages/Amenities';
 import Gallery from './pages/Gallery';
 import Neighborhood from './pages/Neighborhood';
+import ScheduleTour from './pages/ScheduleTour';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route exact path='/amenities' component={Amenities} />
         <Route exact path='/gallery' component={Gallery} />
         <Route exact path='/neighborhood' component={Neighborhood} />
+        <Route exact path='/schedule-tour' component={ScheduleTour} />
       </Switch>
       <Footer />
     </BrowserRouter>
