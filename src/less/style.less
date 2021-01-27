@@ -1,5 +1,6 @@
-@cp-grey: #4d6a79;
-@cp-green: #85d341;
+@cp-grey: #5e767a;
+@cp-accent: #5cd85a;
+@cp-white: #eeeeee;
 @color: #1a1a1a;
 @padd-s: 2rem;
 * {
@@ -9,7 +10,7 @@
   padding: 0;
   text-align: center;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.5em;
   font-size: 1rem;
 }
@@ -47,6 +48,12 @@ header + * {
 /*=============================
     HEADER
   ==============================*/
+header {
+  position: fixed;
+  width: 100%;
+  background-color: #ffffffeb;
+  z-index: 90;
+}
 .logo {
   display: flex;
   align-items: center;
@@ -63,6 +70,7 @@ header + * {
   line-height: 1;
   display: block;
 }
+
 .logo span:first-child {
   margin-left: -0.3rem;
 }
@@ -70,6 +78,7 @@ header .inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 70px;
 }
 header ul {
   display: flex;
@@ -78,34 +87,52 @@ header ul {
 }
 header nav a {
   padding: 0.5em 0 0.5em 1em;
+  color: @color;
+  opacity: 0.6;
+  transition: 500ms;
   font-weight: bold;
+}
+header nav a:hover {
+  opacity: 1;
 }
 /*=============================
     FOOTER
   ==============================*/
 footer {
-  background-color: @color;
+  background-color: @cp-grey;
   padding: @padd-s;
   margin-top: 5%;
 }
 footer * {
-  color: white;
+  color: @color;
 }
 /*=============================
     BANNER
   ==============================*/
+.banner {
+  height: 100vh;
+  position: relative;
+  min-height: 900px;
+}
 .banner-image {
-  height: 30vw;
+  height: calc(100% - @banner-text-height);
+  min-height: 900px;
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
 }
+@banner-text-height: 8rem;
 .banner-text {
+  height: @banner-text-height;
   text-align: center;
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding: @padd-s;
+  background-color: @cp-grey;
+  color: @color;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 /*=============================
     HOME
@@ -195,7 +222,7 @@ footer * {
 .light-box button {
   width: 2rem;
   height: 2rem;
-  background-color: #fff;
+  background-color: @cp-accent;
   text-align: center;
   font-weight: bold;
 }

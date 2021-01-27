@@ -5,7 +5,7 @@
   padding: 0;
   text-align: center;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.5em;
   font-size: 1rem;
 }
@@ -43,6 +43,12 @@ header + * {
 /*=============================
     HEADER
   ==============================*/
+header {
+  position: fixed;
+  width: 100%;
+  background-color: #ffffffeb;
+  z-index: 90;
+}
 .logo {
   display: flex;
   align-items: center;
@@ -66,6 +72,7 @@ header .inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 70px;
 }
 header ul {
   display: flex;
@@ -74,34 +81,51 @@ header ul {
 }
 header nav a {
   padding: 0.5em 0 0.5em 1em;
+  color: #1a1a1a;
+  opacity: 0.6;
+  transition: 500ms;
   font-weight: bold;
+}
+header nav a:hover {
+  opacity: 1;
 }
 /*=============================
     FOOTER
   ==============================*/
 footer {
-  background-color: #1a1a1a;
+  background-color: #5e767a;
   padding: 2rem;
   margin-top: 5%;
 }
 footer * {
-  color: white;
+  color: #1a1a1a;
 }
 /*=============================
     BANNER
   ==============================*/
+.banner {
+  height: 100vh;
+  position: relative;
+  min-height: 900px;
+}
 .banner-image {
-  height: 30vw;
+  height: calc(100% - 8rem);
+  min-height: 900px;
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
 }
 .banner-text {
+  height: 8rem;
   text-align: center;
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding: 2rem;
+  background-color: #5e767a;
+  color: #1a1a1a;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 /*=============================
     HOME
@@ -190,7 +214,7 @@ footer * {
 .light-box button {
   width: 2rem;
   height: 2rem;
-  background-color: #fff;
+  background-color: #5cd85a;
   text-align: center;
   font-weight: bold;
 }

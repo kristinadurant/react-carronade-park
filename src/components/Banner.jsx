@@ -2,14 +2,11 @@ import React from 'react';
 
 const Banner = ({image, text}) => {
     return (
-        <>
-            <div>
-                <div className="banner-image" style={{backgroundImage: `url(${image})`}}></div>
+        <div className="banner">
+            <div className="banner-image" style={{backgroundImage: `url(${image})`}}>
+                <h1 className="banner-text">{text}</h1>
             </div>
-            <h1 className="banner-text">
-                {text}
-            </h1>
-        </>
+         </div>
     )
 }
 

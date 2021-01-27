@@ -7,11 +7,7 @@ const Header = () => {
         <header>
             <div className="inner">
                 <Link to='/' className="logo">
-                    <img src={logo} alt="Carronade Park Logo"/>
-                    <p>
-                        <span>Carronade</span> 
-                        <span>Park</span>
-                    </p>
+                    <span>Carronade Park</span>
                 </Link>
             <nav>
                     <ul>
