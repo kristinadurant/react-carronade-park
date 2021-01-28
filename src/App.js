@@ -19,11 +19,11 @@ const App = () => {
       <Header />
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route exact path='/floor-plans' component={FloorPlans} />
-        <Route exact path='/amenities' component={Amenities} />
-        <Route exact path='/gallery' component={Gallery} />
-        <Route exact path='/neighborhood' component={Neighborhood} />
-        <Route exact path='/schedule-tour' component={ScheduleTour} />
+        <Route exact path='/carronade-park-floor-plans' component={FloorPlans} />
+        <Route exact path='/carronade-park-amenities' component={Amenities} />
+        <Route exact path='/carronade-park-gallery' component={Gallery} />
+        <Route exact path='/carronade-park-neighborhood' component={Neighborhood} />
+        <Route exact path='/carronade-park-schedule-tour' component={ScheduleTour} />
       </Switch>
       <Footer />
     </BrowserRouter>
