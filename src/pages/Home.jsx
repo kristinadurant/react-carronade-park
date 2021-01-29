@@ -23,32 +23,29 @@ const Home = () => {
                 <p>Apartments for rent in Perrysburg Ohio.</p>
             </section>
             <section id="home-page-blocks" className="inner">
-                <div>
-                    <Link to='/floor-plans'>
-                        <img
-                            src='https://res.cloudinary.com/carronadepark/image/upload/v1611285585/Gallery/IMG_1716_Large_s75upg.jpg'
-                            alt='Floor Plans'
-                        />
-                    </Link>
-                    <h2><Link to='/floor-plans'>Floor Plans</Link></h2>
+                <div style={{backgroundImage: 'url(https://res.cloudinary.com/carronadepark/image/upload/v1611285585/Gallery/IMG_1716_Large_s75upg.jpg)'}}>                
+                    <div className="container">                       
+                        <Link to='/carronade-park-floor-plans'>
+                            <i class="fas fa-angle-double-right"></i>
+                            Floor Plans
+                        </Link>
+                    </div>
                 </div>
-                <div>
-                    <Link to='/amenities'>
-                        <img 
-                            src='https://res.cloudinary.com/carronadepark/image/upload/v1611285585/Gallery/IMG_1653_Large_psjvht.jpg'
-                            alt='Apartment Amenities'
-                        />
-                    </Link>
-                    <h2><Link to='/amenities'>Amenities</Link></h2>
+                <div style={{backgroundImage: 'url(https://res.cloudinary.com/carronadepark/image/upload/v1611285585/Gallery/IMG_1653_Large_psjvht.jpg)'}}>
+                    <div className="container">  
+                        <Link to='/carronade-park-amenities'>
+                            <i class="fas fa-angle-double-right"></i>
+                            Amenities
+                        </Link>
+                    </div>
                 </div>
-                <div>
-                    <Link to='/neighborhood'>
-                        <img
-                            src='https://res.cloudinary.com/carronadepark/image/upload/v1611351435/Neighborhood/Poster_2_Large_1_maemqb.jpg'
-                            alt='Carronade Park Neighborhood'
-                        />
-                    </Link>
-                    <h2><Link to='/neighborhood'>Neighborhood</Link></h2>
+                <div style={{backgroundImage: 'url(https://res.cloudinary.com/carronadepark/image/upload/v1611351435/Neighborhood/Poster_2_Large_1_maemqb.jpg)'}}>
+                    <div className="container">  
+                        <Link to='/carronade-park-neighborhood'>
+                            <i class="fas fa-angle-double-right"></i>
+                            Neighborhood
+                        </Link>
+                    </div>
                 </div>
             </section>
         </div>

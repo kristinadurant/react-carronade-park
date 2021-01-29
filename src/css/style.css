@@ -1,11 +1,16 @@
+.bg-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 * {
-  color: #1a1a1a;
+  color: #111;
   text-decoration: none;
   margin: 0;
   padding: 0;
   text-align: center;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   line-height: 1.5em;
   font-size: 1rem;
 }
@@ -32,10 +37,12 @@ input[type="radio"] {
 }
 a {
   display: block;
+  transition: color 500ms;
 }
 .inner {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
+  width: 90%;
 }
 /*=============================
     HEADER
@@ -49,9 +56,6 @@ header {
 .logo {
   display: flex;
   align-items: center;
-}
-.logo img {
-  width: 5rem;
 }
 .logo span {
   font-family: "Satisfy", cursive;
@@ -78,10 +82,8 @@ header ul {
 }
 header nav a {
   padding: 0.5em 0 0.5em 1em;
-  color: #1a1a1a;
+  color: #111;
   opacity: 0.6;
-  transition: 500ms;
-  font-weight: bold;
 }
 header nav a:hover {
   opacity: 1;
@@ -90,12 +92,12 @@ header nav a:hover {
     FOOTER
   ==============================*/
 footer {
-  background-color: #5e767a;
+  background-color: #566473;
   padding: 2rem;
   margin-top: 5%;
 }
 footer * {
-  color: #1a1a1a;
+  color: #111;
 }
 /*=============================
     BANNER
@@ -114,13 +116,12 @@ footer * {
 }
 .banner-text {
   padding-top: calc(70px - 3rem);
-  color: #1a1a1a;
   position: absolute;
   width: 100%;
   bottom: 0;
 }
 .banner-text a {
-  background-color: #5e767a;
+  background-color: #566473;
   display: inline-block;
   height: 3rem;
   width: 2.5rem;
@@ -128,23 +129,51 @@ footer * {
 }
 .banner-text i {
   font-size: 1.3rem;
+  color: #fff;
 }
 .banner-text h1 {
   text-align: center;
-  text-transform: uppercase;
   font-size: 2.5rem;
   padding: 2rem;
-  background-color: #5e767a;
+  background-color: #566473;
+  font-weight: normal;
+  color: #fff;
 }
 /*=============================
     HOME
   ==============================*/
-#home-page-blocks {
-  display: flex;
-  justify-content: space-between;
-}
-#home-page-blocks div {
+#home-page-blocks > div {
   width: 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  padding-top: 32%;
+  margin-right: 5%;
+  display: inline-block;
+}
+#home-page-blocks > div:last-child {
+  margin-right: 0;
+}
+#home-page-blocks .container {
+  background-color: #ffffffeb;
+  position: absolute;
+  bottom: 5%;
+  width: 70%;
+  left: 15%;
+  padding: 1rem;
+}
+#home-page-blocks a {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.25rem;
+}
+#home-page-blocks .container i {
+  color: #29bb7d;
+  margin-right: 0.1em;
+}
+#home-page-blocks a:hover {
+  color: #29bb7d;
 }
 /*=============================
     FLOOR PLANS
@@ -223,7 +252,7 @@ footer * {
 .light-box button {
   width: 2rem;
   height: 2rem;
-  background-color: #5cd85a;
+  background-color: #29bb7d;
   text-align: center;
   font-weight: bold;
 }

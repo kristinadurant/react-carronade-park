@@ -11,11 +11,11 @@ const Header = () => {
                 </Link>
             <nav>
                     <ul>
-                        <li><Link to='/floor-plans'>FLOOR PLANS</Link></li>
-                        <li><Link to='/amenities'>AMENITIES</Link></li>
-                        <li><Link to='/gallery'>GALLERY</Link></li>
-                        <li><Link to='/neighborhood'>NEIGHBORHOOD</Link></li>                       
-                        <li><Link to='/schedule-tour'>SCHEDULE A TOUR</Link></li>             
+                        <li><Link to='/carronade-park-floor-plans'>FLOOR PLANS</Link></li>
+                        <li><Link to='/carronade-park-amenities'>AMENITIES</Link></li>
+                        <li><Link to='/carronade-park-gallery'>GALLERY</Link></li>
+                        <li><Link to='/carronade-park-neighborhood'>NEIGHBORHOOD</Link></li>                       
+                        <li><Link to='/carronade-park-schedule-tour'>SCHEDULE A TOUR</Link></li>             
                         <li>
                             <a 
                                 href='https://app.propertyware.com/pw/portals/fortmeigsaptsllc/tenant.action' 
