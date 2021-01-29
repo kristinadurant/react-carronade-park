@@ -1,3 +1,6 @@
+* {
+  transition: color 500ms;
+}
 .bg-image {
   background-size: cover;
   background-repeat: no-repeat;
@@ -37,7 +40,6 @@ input[type="radio"] {
 }
 a {
   display: inline-block;
-  transition: color 500ms;
 }
 .inner-wide {
   max-width: 1400px;
@@ -136,11 +138,10 @@ footer * {
 .banner {
   height: 100vh;
   position: relative;
-  min-height: 900px;
+  min-height: 600px;
 }
 .banner-image {
   height: calc(100% - 70px);
-  min-height: 900px;
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -161,6 +162,10 @@ footer * {
 .banner-text i {
   font-size: 1.3rem;
   color: #fff;
+  transition: ;
+}
+.banner-text a:hover i {
+  color: #29bb7d;
 }
 /*=============================
     HOME
@@ -196,7 +201,7 @@ footer * {
 }
 i.fa-angle-double-right {
   color: #29bb7d;
-  margin-right: 0.1em;
+  margin-right: 0.2em;
 }
 #home-page-blocks a:hover {
   color: #29bb7d;
@@ -254,8 +259,13 @@ i.fa-angle-double-right {
   max-width: 800px;
   margin: auto;
 }
+#amenities-page .carousel {
+  margin-bottom: 5vw;
+}
 .amenities-list li {
   margin-bottom: 0.5em;
+  font-size: 1.25em;
+  font-style: italic;
 }
 /*=============================
     GALLERY

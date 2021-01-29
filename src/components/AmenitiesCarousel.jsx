@@ -25,7 +25,6 @@ const AmenitiesCarousel = () => {
 
     return (
       <Carousel
-        showDots
         keyBoardControl
         infinite
         autoPlay
