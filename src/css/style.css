@@ -32,6 +32,12 @@ button {
   background-color: transparent;
   border: none;
 }
+button:focus,
+button:active,
+input:focus,
+input:active {
+  outline: none;
+}
 input[type="radio"] {
   cursor: pointer;
 }
@@ -43,16 +49,21 @@ a {
 }
 .inner-wide {
   max-width: 1400px;
-  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
   width: 90%;
 }
 .inner {
   width: 75%;
-  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
   max-width: 1100px;
 }
+section {
+  margin-bottom: 5vw;
+}
 section.intro {
-  margin: 3vw auto 5vw;
+  margin-top: 3vw;
   max-width: 800px;
 }
 /*=============================
@@ -109,7 +120,7 @@ header .fa-leaf {
 .logo span:first-child {
   margin-left: -0.3rem;
 }
-header .inner {
+header .inner-wide {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -338,15 +349,45 @@ i.fa-angle-double-right {
   justify-content: space-between;
 }
 #neighborhood-page .tabs button {
-  text-transform: uppercase;
   padding: 0.5em;
+}
+#neighborhood-page .tabs button span {
+  font-style: italic;
   font-weight: bold;
+  font-size: 1.1rem;
+}
+#neighborhood-page .tabs button i {
+  color: transparent;
+  transition: 500ms;
+}
+#neighborhood-page .tabs button:hover * {
+  color: #29bb7d;
 }
 .map-container {
   overflow: hidden;
 }
 .map-container > * {
   margin-top: -60px;
+}
+#neighborhood-page .react-multi-carousel-track {
+  margin-bottom: 50px;
+}
+#neighborhood-page li.react-multi-carousel-item {
+  border-right: 2px solid #29bb7d;
+}
+#neighborhood-page li.react-multi-carousel-item div {
+  padding: 0 3%;
+}
+#neighborhood-page li.react-multi-carousel-item p:first-of-type {
+  font-weight: bold;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+#neighborhood-page li.react-multi-carousel-item span {
+  margin: 2em 0.5em 0;
+}
+#neighborhood-page li.react-multi-carousel-item i {
+  color: #29bb7d;
 }
 /*=============================
     SCHEDULE A TOUR

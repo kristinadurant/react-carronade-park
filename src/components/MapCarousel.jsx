@@ -23,7 +23,6 @@ const responsive = {
 const MapCarousel = ({ markers }) => {
 
   return (
-    <div className="inner">
       <Carousel
         showDots
         keyBoardControl
@@ -41,14 +40,13 @@ const MapCarousel = ({ markers }) => {
                 <p>{marker.description}</p>
                 <p>
                   <span>{marker.distance}</span>                         
-                  {marker.bike && <span>{marker.bike}<i class="fas fa-biking"></i></span>}
-                  {marker.car && <span>{marker.car}<i class="fas fa-car-side"></i></span>}
+                  {marker.bike && <span><i class="fas fa-biking"></i>{marker.bike}</span> }
+                  {marker.car && <span><i class="fas fa-car-side"></i>{marker.car}</span>}
                 </p>
               </div>
           );
         })}
       </Carousel>
-    </div>
   );
 };
 

@@ -5,7 +5,7 @@ import logo from '../images/carronade_park_logo2.png';
 const Header = () => {
     return (
         <header>
-            <div className="inner">
+            <div className="inner-wide">
                 <Link to='/' className="logo">
                     <i class="fas fa-leaf"></i>
                     <span>Carronade Park</span>
