@@ -36,13 +36,44 @@ input[type="radio"] {
   cursor: pointer;
 }
 a {
-  display: block;
+  display: inline-block;
   transition: color 500ms;
 }
-.inner {
+.inner-wide {
   max-width: 1400px;
   margin: auto;
   width: 90%;
+}
+.inner {
+  width: 75%;
+  margin: auto;
+  max-width: 1100px;
+}
+section.intro {
+  margin: 3vw auto 5vw;
+  max-width: 800px;
+}
+/*=============================
+    TYPOGRAPHY
+==============================*/
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem;
+  background-color: #2f3e4e;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+}
+section.intro p {
+  font-size: 1.1rem;
 }
 /*=============================
     HEADER
@@ -92,7 +123,7 @@ header nav a:hover {
     FOOTER
   ==============================*/
 footer {
-  background-color: #566473;
+  background-color: #2f3e4e;
   padding: 2rem;
   margin-top: 5%;
 }
@@ -121,7 +152,7 @@ footer * {
   bottom: 0;
 }
 .banner-text a {
-  background-color: #566473;
+  background-color: #2f3e4e;
   display: inline-block;
   height: 3rem;
   width: 2.5rem;
@@ -131,24 +162,19 @@ footer * {
   font-size: 1.3rem;
   color: #fff;
 }
-.banner-text h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  padding: 2rem;
-  background-color: #566473;
-  font-weight: normal;
-  color: #fff;
-}
 /*=============================
     HOME
   ==============================*/
+#home-page section:first-of-type {
+  margin: 3vw auto 5vw;
+}
 #home-page-blocks > div {
   width: 30%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  padding-top: 32%;
+  padding-top: 33%;
   margin-right: 5%;
   display: inline-block;
 }
@@ -164,11 +190,11 @@ footer * {
   padding: 1rem;
 }
 #home-page-blocks a {
-  font-weight: bold;
   font-style: italic;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
-#home-page-blocks .container i {
+i.fa-angle-double-right {
   color: #29bb7d;
   margin-right: 0.1em;
 }
@@ -192,11 +218,34 @@ footer * {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
-  margin: auto;
+  width: 60%;
+  margin: 0 auto 2.5vw;
 }
 #floor-plans-blocks > :last-child img {
   width: 50%;
+}
+#floor-plans-blocks .details {
+  margin-bottom: 1.5em;
+}
+#floor-plans-blocks .details span {
+  padding: 0 1em;
+  border-left: 2px solid #29bb7d;
+}
+#floor-plans-blocks .details span:last-child {
+  border-right: 2px solid #29bb7d;
+}
+.button {
+  border: 2px solid #29bb7d;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  font-size: 0.875rem;
+  padding: 0.7em 2em;
+  color: #fff;
+  background: #29bb7d;
+}
+.button:hover {
+  color: #29bb7d;
+  background: #fff;
 }
 /*=============================
     AMENITIES
