@@ -86,6 +86,12 @@ header {
   background-color: #ffffffeb;
   z-index: 90;
 }
+header .fa-leaf {
+  color: #29bb7d;
+  transform: rotate(-90deg);
+  font-size: 2rem;
+  margin-right: -0.5em;
+}
 .logo {
   display: flex;
   align-items: center;
@@ -98,6 +104,7 @@ header {
   font-weight: bold;
   line-height: 1;
   display: block;
+  z-index: 10;
 }
 .logo span:first-child {
   margin-left: -0.3rem;
