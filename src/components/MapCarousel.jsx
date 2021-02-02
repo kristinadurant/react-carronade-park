@@ -10,7 +10,7 @@ const responsive = {
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 2,
+    items: 1,
     paritialVisibilityGutter: 50
   },
   mobile: {
@@ -32,6 +32,7 @@ const MapCarousel = ({ markers }) => {
         customTransition="all 1s"
         transitionDuration={1000}
         responsive={responsive}
+        containerClass="map-carousel"
       >
         {markers.map((marker, index) => {
           return (

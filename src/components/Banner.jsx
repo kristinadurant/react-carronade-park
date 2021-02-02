@@ -1,18 +1,17 @@
 import React from 'react';
 import { HashLink } from 'react-router-hash-link';
+import BannerCarousel from './BannerCarousel';
 
-const Banner = ({image, text}) => {
+const Banner = ({ text }) => {
     return (
         <div className="banner">
-            <div className="banner-image" style={{backgroundImage: `url(${image})`}}>
-                <div id ='main' className="banner-text">
-                    <HashLink smooth to='#main'>
-                        <i class="fas fa-chevron-down"></i>
-                    </HashLink>
-                    <h1>{text}</h1>
-                </div>  
-                
-            </div>
+            <BannerCarousel />
+            <div id ='main' className="banner-text">
+                <HashLink smooth to='#main'>
+                    <i class="fas fa-chevron-down"></i>
+                </HashLink>
+                <h1>{text}</h1>
+            </div>  
          </div>
     )
 }

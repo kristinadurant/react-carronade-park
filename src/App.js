@@ -11,22 +11,27 @@ import Amenities from './pages/Amenities';
 import Gallery from './pages/Gallery';
 import Neighborhood from './pages/Neighborhood';
 import ScheduleTour from './pages/ScheduleTour';
+import { ModalContextProvider } from './context/ModalContext';
+import Modal from './components/Modal';
 
 const App = () => {
   return (
-    <BrowserRouter >
-      <ScrollToTop />
-      <Header />
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/carronade-park-floor-plans' component={FloorPlans} />
-        <Route exact path='/carronade-park-amenities' component={Amenities} />
-        <Route exact path='/carronade-park-gallery' component={Gallery} />
-        <Route exact path='/carronade-park-neighborhood' component={Neighborhood} />
-        <Route exact path='/carronade-park-schedule-tour' component={ScheduleTour} />
-      </Switch>
-      <Footer />
-    </BrowserRouter>
+    <ModalContextProvider>
+      <BrowserRouter >
+        <ScrollToTop />
+        <Modal /> 
+        <Header />
+        <Switch>
+          <Route exact path='/' component={Home} />       
+          <Route exact path='/carronade-park-floor-plans' component={FloorPlans} />
+          <Route exact path='/carronade-park-amenities' component={Amenities} />
+          <Route exact path='/carronade-park-gallery' component={Gallery} />
+          <Route exact path='/carronade-park-neighborhood' component={Neighborhood} />
+          <Route exact path='/carronade-park-schedule-tour' component={ScheduleTour} />
+        </Switch>
+        <Footer />     
+      </BrowserRouter>
+    </ModalContextProvider>
   );
 }
 

@@ -32,6 +32,8 @@ const AmenitiesCarousel = () => {
         customTransition="all 1s"
         transitionDuration={1000}
         responsive={responsive}
+        containerClass="amenities-carousel"
+        renderButtonGroupOutside={true}
       >
         {amenities.map((item, index) => {
           return (
