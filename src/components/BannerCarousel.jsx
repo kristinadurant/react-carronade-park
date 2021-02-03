@@ -21,7 +21,6 @@ const responsive = {
 const BannerCarousel = () => {
 
     return (
-      <div className="banner-carousel-container">
         <Carousel
           infinite
           autoPlay
@@ -39,7 +38,6 @@ const BannerCarousel = () => {
             );
           })}
         </Carousel>
-      </div>
     )
 }
 

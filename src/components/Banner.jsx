@@ -2,10 +2,15 @@ import React from 'react';
 import { HashLink } from 'react-router-hash-link';
 import BannerCarousel from './BannerCarousel';
 
-const Banner = ({ text }) => {
+const Banner = ({ text, image }) => {
     return (
         <section className="banner">
-            <BannerCarousel />
+            <div className="banner-carousel-container">
+                {image 
+                ? <img src={image} alt="Carronade Park Apartments"/>
+                : <BannerCarousel />
+                }
+            </div>
             <div id ='main' className="banner-text">
                 <HashLink smooth to='#main'>
                 </HashLink>

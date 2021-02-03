@@ -422,6 +422,18 @@ i.fa-angle-double-right {
   max-height: 80%;
   max-width: 60%;
 }
+.gallery div {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.gallery div a {
+  width: calc(25% - 0.4rem);
+  height: 16vw;
+  margin: 0.2rem;
+  display: block;
+  overflow: hidden;
+}
 /*=============================
     NEIGHBORHOOD
   ==============================*/
@@ -473,6 +485,11 @@ i.fa-angle-double-right {
 /*=============================
     SCHEDULE A TOUR
   ==============================*/
+#schedule-tour h1 {
+  padding: 10% 0 5%;
+  background-color: inherit;
+  color: inherit;
+}
 #tour-form form {
   display: flex;
   flex-direction: column;

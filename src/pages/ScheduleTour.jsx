@@ -1,13 +1,9 @@
 import React from 'react';
-import Banner from '../components/Banner';
 
 const ScheduleTour = () => {
     return (
         <div id='schedule-tour'>
-            <Banner text={'Schedule a Tour'} image={'https://res.cloudinary.com/carronadepark/image/upload/v1611351435/Neighborhood/Poster_2_Large_1_maemqb.jpg'}/>
-            <section className="intro inner">
-                Send us a request for scheduling a tour.
-            </section>
+            <h1>Send us a request for scheduling a tour.</h1>
             <section id="tour-form" className="inner">
                 <form>
                     <label for='st-name' className='required'>Name:</label>
