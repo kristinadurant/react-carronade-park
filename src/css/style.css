@@ -1,5 +1,5 @@
 * {
-  transition: color 500ms;
+  transition: color 500ms, background-color 500ms;
 }
 .bg-image {
   background-size: cover;
@@ -183,6 +183,26 @@ footer {
 }
 footer * {
   color: #fff;
+  margin: auto;
+}
+footer .social {
+  display: flex;
+  justify-content: center;
+}
+footer .social a {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  margin: 1rem 0.5em;
+}
+footer .social a:hover {
+  background-color: #fff;
+}
+footer .social a:hover i {
+  color: #2c333c;
 }
 /*=============================
     BANNER
@@ -471,6 +491,7 @@ fieldset.two-columns div {
   border: 1px solid #eee;
   padding: 0 5%;
   margin-bottom: 5%;
+  margin-top: calc(5% - 1em);
 }
 .survey > p {
   font-weight: bold;
@@ -481,6 +502,10 @@ fieldset.two-columns div {
 .survey > p span {
   color: #67ddab;
   text-decoration: underline;
+}
+label.required::after {
+  content: " *";
+  color: red;
 }
 /*=============================
     RESPONSIVE DESIGN

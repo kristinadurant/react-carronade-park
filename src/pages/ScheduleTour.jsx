@@ -10,18 +10,18 @@ const ScheduleTour = () => {
             </section>
             <section id="tour-form" className="inner">
                 <form>
-                    <label for='st-name'>Name:</label>
+                    <label for='st-name' className='required'>Name:</label>
                     <input type='text' id='st-name' name='name' required/>
-                    <label for='st-email'>Email Address:</label>
+                    <label for='st-email' className='required'>Email Address:</label>
                     <input type='text' id='st-email' name='email' required/>
-                    <label for='st-home-phone'>Home Phone:</label>
+                    <label for='st-home-phone' className='required'>Home Phone:</label>
                     <input type='text' id='st-home-phone' name='home phone' required/>
                     <label for='st-work-phone'>Work Phone:</label>
                     <input type='text' id='st-work-phone' name=''/>
                     <label for='st-source'>How did you learn about our site:</label>
                     <input type='text' id='st-source' name=''/>
-                    <label for='st-work-phone'>Questions/Comments:</label>
-                    <input type='textarea' id='' name='' rows="10"/>
+                    <label for='st-work-phone' className='required'>Questions/Comments:</label>
+                    <input type='textarea' id='' name='' rows="10" required/>
                     <div className="survey">
                         <p>To better serve you, please take a moment to fill out our <span>optional survey.</span></p>
                         <fieldset className="two-columns">
