@@ -8,7 +8,6 @@ const Banner = ({ text }) => {
             <BannerCarousel />
             <div id ='main' className="banner-text">
                 <HashLink smooth to='#main'>
-                    <i class="fas fa-chevron-down"></i>
                 </HashLink>
                 <h1>{text}</h1>
             </div>  

@@ -1,12 +1,20 @@
 import React, { useContext } from 'react';
 import { ModalContext } from '../context/ModalContext';
+import { SRLWrapper } from "simple-react-lightbox";
 
 const FloorPlan = ({ images }) => {
     const { setModal} = useContext(ModalContext);
 
     return (
         <>
-        <div className="img-wrapper">
+        <SRLWrapper>
+            {images.map((item, index) => (
+                <a href={item} key={index}>
+                    <img src={item} alt="text" />
+                </a>
+            ))}
+        </SRLWrapper>
+        {/* <div className="img-wrapper">
             {images.map((item, index) => (
                 <img 
                     key={index}
@@ -23,7 +31,7 @@ const FloorPlan = ({ images }) => {
         </p>
         <a className='button' href='#' target='_blank' rel='noreferrer'>
                 DOWNLOAD
-        </a>
+        </a> */}
         </>
     )
 }
