@@ -23,26 +23,46 @@ const Home = () => {
                 <p>Apartments for rent in Perrysburg Ohio.</p>
             </section>
             <section id="home-page-blocks" className="inner-wide">
-                <div style={{backgroundImage: 'url(https://res.cloudinary.com/carronadepark/image/upload/v1611285585/Gallery/IMG_1716_Large_s75upg.jpg)'}}>                
-                    <div className="container">                       
+                <div>
+                    <Link 
+                        to='/carronade-park-floor-plans' 
+                        style={{backgroundImage: 'url(https://res.cloudinary.com/carronadepark/image/upload/v1611285585/Gallery/IMG_1716_Large_s75upg.jpg)'}}
+                        className='background-image'
+                    >                
+
+                    </Link>
+                    <div className="title">                       
                         <Link to='/carronade-park-floor-plans'>
-                            <i class="fas fa-angle-double-right"></i>
+                            {/* <i class="fas fa-angle-double-right"></i> */}
                             Floor Plans
                         </Link>
                     </div>
                 </div>
-                <div style={{backgroundImage: 'url(https://res.cloudinary.com/carronadepark/image/upload/v1611285585/Gallery/IMG_1653_Large_psjvht.jpg)'}}>
-                    <div className="container">  
+                <div>
+                    <Link 
+                        to='/carronade-park-amenities' 
+                        style={{backgroundImage: 'url(https://res.cloudinary.com/carronadepark/image/upload/v1611285585/Gallery/IMG_1653_Large_psjvht.jpg)'}}
+                        className='background-image'
+                    >
+
+                    </Link>
+                    <div className="title">  
                         <Link to='/carronade-park-amenities'>
-                            <i class="fas fa-angle-double-right"></i>
+                            {/* <i class="fas fa-angle-double-right"></i> */}
                             Amenities
                         </Link>
                     </div>
                 </div>
-                <div style={{backgroundImage: 'url(https://res.cloudinary.com/carronadepark/image/upload/v1611351435/Neighborhood/Poster_2_Large_1_maemqb.jpg)'}}>
-                    <div className="container">  
+                <div>
+                    <Link 
+                        to='/carronade-park-neighborhood' 
+                        style={{backgroundImage: 'url(https://res.cloudinary.com/carronadepark/image/upload/v1611351435/Neighborhood/Poster_2_Large_1_maemqb.jpg)'}}
+                        className='background-image'
+                        >
+                    </Link>
+                    <div className="title">  
                         <Link to='/carronade-park-neighborhood'>
-                            <i class="fas fa-angle-double-right"></i>
+                            {/* <i class="fas fa-angle-double-right"></i> */}
                             Neighborhood
                         </Link>
                     </div>

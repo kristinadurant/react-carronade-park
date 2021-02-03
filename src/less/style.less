@@ -256,31 +256,48 @@ footer .social a:hover i {
 }
 #home-page-blocks > div {
   width: 30%;
-  .bg-image;
-  position: relative;
-  padding-top: 33%;
+  height: 25vw;
+  max-height: 450px;
   margin-right: 5%;
   display: inline-block;
+  overflow: hidden;
+  position: relative;
 }
 #home-page-blocks > div:last-child {
   margin-right: 0;
 }
-#home-page-blocks .container {
+#home-page-blocks .background-image {
+  .bg-image;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition: 1s;
+}
+#home-page-blocks .background-image:hover {
+  transform: scale(1.2);
+}
+#home-page-blocks .title {
   background-color: #ffffffeb;
   position: absolute;
   bottom: 5%;
   width: 70%;
   left: 15%;
-  padding: 1rem;
+  padding: 0.75rem;
 }
+// #home-page-blocks a {
+//   font-style: italic;
+//   font-size: 1.5rem;
+//   font-weight: bold;
+// }
+// i.fa-angle-double-right {
+//   color: @cp-accent;
+//   margin-right: 0.2em;
+// }
 #home-page-blocks a {
-  font-style: italic;
-  font-size: 1.5rem;
   font-weight: bold;
-}
-i.fa-angle-double-right {
-  color: @cp-accent;
-  margin-right: 0.2em;
+  font-size: 1.25rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 #home-page-blocks a:hover {
   color: @cp-accent;
@@ -315,8 +332,10 @@ i.fa-angle-double-right {
   margin-bottom: 1.5em;
 }
 #floor-plans-blocks .details span {
-  padding: 0 1em;
+  padding: 0 1.5em;
   border-left: 2px solid @cp-accent;
+  font-weight: bold;
+  font-size: 0.875rem;
 }
 #floor-plans-blocks .details span:last-child {
   border-right: 2px solid @cp-accent;
