@@ -1,5 +1,5 @@
-@cp-grey: #2f3e4e;
-@cp-accent: #29bb7d;
+@cp-grey: #2c333c;
+@cp-accent: #67ddab;
 @cp-white: #eeeeee;
 @color: #111;
 @padd-s: 2rem;
@@ -78,7 +78,7 @@ h1 {
   text-align: center;
   font-size: 2rem;
   padding: 2rem;
-  background-color: #2f3e4e;
+  background-color: @cp-grey;
   font-weight: 600;
   color: #fff;
   text-transform: uppercase;
@@ -134,7 +134,8 @@ header {
   position: fixed;
   width: 100%;
   background-color: #ffffffeb;
-  z-index: 90;
+  z-index: 10001;
+  box-shadow: 0px 0px 5px #666;
 }
 header .fa-leaf {
   color: @cp-accent;
@@ -188,7 +189,7 @@ footer {
   margin-top: 5%;
 }
 footer * {
-  color: @color;
+  color: #fff;
 }
 /*=============================
     BANNER
@@ -197,6 +198,11 @@ footer * {
   height: 100vh;
   position: relative;
   min-height: 600px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.banner-carousel-container {
+  height: 100%;
   overflow: hidden;
 }
 .banner img {
@@ -218,7 +224,6 @@ footer * {
 .banner-text i {
   font-size: 1.3rem;
   color: #fff;
-  transition: ;
 }
 .banner-text a:hover i {
   color: @cp-accent;
@@ -226,8 +231,8 @@ footer * {
 /*=============================
     HOME
   ==============================*/
-#home-page section:first-of-type {
-  margin: 3vw auto 5vw;
+#home-page section.intro {
+  max-width: 1400px;
 }
 #home-page-blocks > div {
   width: 30%;
@@ -304,6 +309,8 @@ i.fa-angle-double-right {
   padding: 0.7em 2em;
   color: #fff;
   background: @cp-accent;
+  text-transform: uppercase;
+  text-align: center !important;
 }
 .button:hover {
   color: @cp-accent;
@@ -315,14 +322,13 @@ i.fa-angle-double-right {
 #amenities-page section.carousel {
   margin-bottom: 5vw;
 }
-.amenities-carousel {
-  max-width: 800px;
-  margin: auto;
-}
 .amenities-list li {
   margin-bottom: 0.5em;
   font-size: 1.25em;
   font-style: italic;
+}
+.react-multi-carousel-list .react-multiple-carousel__arrow {
+  border-radius: 0;
 }
 
 /*=============================
@@ -437,10 +443,52 @@ i.fa-angle-double-right {
   flex-direction: column;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  max-width: 600px;
+  margin: auto;
+}
+#tour-form * {
+  text-align: left;
+}
+#tour-form .button {
+  margin: auto;
 }
 fieldset {
   border: none;
+  margin-bottom: 1em;
+}
+input {
+  border: 2px solid #eee;
+  background-color: #eee;
+  padding: 0.25em 0.5em;
+  margin-bottom: 1em;
+}
+input:focus {
+  border: 2px solid @cp-grey;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 0.5em;
+  vertical-align: middle;
+  margin-bottom: 0;
+}
+fieldset.two-columns div {
+  width: 50%;
+  display: inline-block;
+}
+.survey {
+  border: 1px solid #eee;
+  padding: 0 5%;
+  margin-bottom: 5%;
+}
+.survey > p {
+  font-weight: bold;
+  line-height: 1;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+.survey > p span {
+  color: @cp-accent;
+  text-decoration: underline;
 }
 /*=============================
     RESPONSIVE DESIGN

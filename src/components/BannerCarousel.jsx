@@ -21,23 +21,25 @@ const responsive = {
 const BannerCarousel = () => {
 
     return (
-      <Carousel
-        infinite
-        autoPlay
-        autoPlaySpeed={3000}
-        customTransition="transform 700ms ease-out"
-        responsive={responsive}
-        arrows={false}
-        keyBoardControl={false}
-      >
-        {images.map((item, index) => {
-          return (
-              <div key={index}>
-                  <img src={item.url} alt="Carronade Park Apartments"/>
-              </div>
-          );
-        })}
-      </Carousel>
+      <div className="banner-carousel-container">
+        <Carousel
+          infinite
+          autoPlay
+          autoPlaySpeed={3000}
+          customTransition="transform 700ms ease-out"
+          responsive={responsive}
+          arrows={false}
+          keyBoardControl={false}
+        >
+          {images.map((item, index) => {
+            return (
+                <div key={index}>
+                    <img src={item.url} alt="Carronade Park Apartments"/>
+                </div>
+            );
+          })}
+        </Carousel>
+      </div>
     )
 }
 

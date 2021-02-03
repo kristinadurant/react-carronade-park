@@ -8,7 +8,7 @@ const Footer = () => {
             <p>Phone: 419-873-9933</p>
             <div className="social">
             <a href="https://www.facebook.com/schoenbuilders" rel="noreferrer" target='_blank'>
-                <i class="fab fa-facebook"></i>
+                <i class="fab fa-facebook-f"></i>
             </a>
             <a href="https://www.houzz.com/professionals/general-contractors/schoen-builders-pfvwus-pf~402654639?" rel="noreferrer" target='_blank'>
                 <i class="fab fa-houzz"></i>

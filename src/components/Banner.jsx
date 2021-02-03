@@ -4,7 +4,7 @@ import BannerCarousel from './BannerCarousel';
 
 const Banner = ({ text }) => {
     return (
-        <div className="banner">
+        <section className="banner">
             <BannerCarousel />
             <div id ='main' className="banner-text">
                 <HashLink smooth to='#main'>
@@ -12,7 +12,7 @@ const Banner = ({ text }) => {
                 </HashLink>
                 <h1>{text}</h1>
             </div>  
-         </div>
+         </section>
     )
 }
 

@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <div id="home-page">
             <Banner text={'Carronade Park Townhomes'} image={'https://res.cloudinary.com/carronadepark/image/upload/v1611351435/Neighborhood/Poster_2_Large_1_maemqb.jpg'}/>
-            <section className="inner">
+            <section className="inner-wide intro">
                 <p>Perrysburg, Ohio is a suburb of Toledo with a population of about 20,600. 
                 At the intersection of I-75 and I-475, Perrysburg is a prime location for commuting outside 
                 Toledo to surrounding areas. Perrysburg continues to grow with new locations for shopping, 
