@@ -25,7 +25,8 @@ const images = [
     { id: 26, url: 'https://res.cloudinary.com/carronadepark/image/upload/v1611285585/Gallery/IMG_1715_Large_otojvp.jpg'}, 
     { id: 27, url: 'https://res.cloudinary.com/carronadepark/image/upload/v1611285586/Gallery/IMG_1654_Large_wey2ri.jpg'},
     { id: 28, url: 'https://res.cloudinary.com/carronadepark/image/upload/v1611285585/Gallery/IMG_1653_Large_psjvht.jpg'},
-    { id: 29, url: 'https://res.cloudinary.com/carronadepark/image/upload/v1611285585/Gallery/IMG_1716_Large_s75upg.jpg'}
+    { id: 29, url: 'https://res.cloudinary.com/carronadepark/image/upload/v1611285585/Gallery/IMG_1716_Large_s75upg.jpg'},
+    { id: 16, url: 'https://res.cloudinary.com/carronadepark/image/upload/v1611285585/Gallery/IMG_1715_Large_otojvp.jpg'}
 ];
 
 export default images;

@@ -314,6 +314,7 @@ i.fa-angle-double-right {
 #floor-plans-blocks .container img {
   width: 20vw;
   max-width: 200px;
+  cursor: pointer;
 }
 #floor-plans-blocks .details {
   margin-bottom: 1.5em;
@@ -382,40 +383,6 @@ i.fa-angle-double-right {
   width: 100%;
   height: 100%;
 }
-.light-box {
-  position: fixed;
-  top: 0;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.light-box .overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: #000c;
-  z-index: 50;
-}
-.light-box * {
-  z-index: 90;
-}
-.light-box button {
-  width: 2rem;
-  height: 2rem;
-  background-color: #67ddab;
-  text-align: center;
-  font-weight: bold;
-}
-.light-box button * {
-  vertical-align: middle;
-  line-height: 2rem;
-}
-.light-box img {
-  max-height: 80%;
-  max-width: 60%;
-}
 .gallery div {
   display: flex;
   justify-content: space-around;
@@ -423,10 +390,37 @@ i.fa-angle-double-right {
 }
 .gallery div a {
   width: calc(25% - 0.4rem);
-  height: 16vw;
   margin: 0.2rem;
   display: block;
   overflow: hidden;
+}
+.gallery a:nth-of-type(n + 5) {
+  width: calc(33.33% - 0.4em);
+}
+.gallery a:nth-of-type(n + 8) {
+  width: calc(25% - 0.4rem);
+}
+.gallery a:nth-of-type(n + 12) {
+  width: calc(33.33% - 0.4em);
+}
+.gallery a:nth-of-type(n + 15) {
+  width: calc(50% - 0.4em);
+}
+.gallery a:nth-of-type(n + 17) {
+  width: calc(33.33% - 0.4em);
+}
+.gallery a:nth-of-type(n + 20) {
+  width: calc(25% - 0.4em);
+}
+.gallery a:nth-of-type(n + 24) {
+  width: calc(33.33% - 0.4em);
+}
+.gallery a:nth-of-type(n + 27) {
+  width: calc(50% - 0.4em);
+}
+.gallery div a img {
+  transition: 1s;
+  display: block;
 }
 /*=============================
     NEIGHBORHOOD
