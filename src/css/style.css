@@ -302,24 +302,18 @@ i.fa-angle-double-right {
   display: flex;
   justify-content: space-between;
 }
-#floor-plans-blocks > :first-child {
-  width: 30%;
+#floor-plans-blocks .container {
+  width: 45%;
 }
-#floor-plans-blocks > :last-child {
-  width: 60%;
-}
-#floor-plans-blocks .img-wrapper {
+#floor-plans-blocks .container > div {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 60%;
-  margin: 0 auto 2.5vw;
+  justify-content: center;
+  margin: 10% auto;
 }
-#floor-plans-blocks img {
-  cursor: pointer;
-}
-#floor-plans-blocks > :last-child img {
-  width: 50%;
+#floor-plans-blocks .container img {
+  width: 20vw;
+  max-width: 200px;
 }
 #floor-plans-blocks .details {
   margin-bottom: 1.5em;
