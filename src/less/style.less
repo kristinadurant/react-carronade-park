@@ -185,8 +185,8 @@ header nav a:hover {
   ==============================*/
 footer {
   background-color: @cp-grey;
-  padding: @padd-s;
-  margin-top: 5%;
+  padding: 7% 0 2%;
+  margin-top: 10%;
 }
 footer * {
   color: #fff;
@@ -202,14 +202,11 @@ footer .social a {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid white;
+  border: 1px solid @cp-accent;
   margin: 1rem 0.5em;
 }
 footer .social a:hover {
-  background-color: #fff;
-}
-footer .social a:hover i {
-  color: @cp-grey;
+  background-color: @cp-accent;
 }
 /*=============================
     BANNER
@@ -258,10 +255,10 @@ footer .social a:hover i {
   max-width: 1400px;
 }
 #home-page-blocks > div {
-  width: 30%;
+  width: 32%;
   height: 30vw;
   max-height: 480px;
-  margin-right: 5%;
+  margin-right: 2%;
   display: inline-block;
   overflow: hidden;
   position: relative;
@@ -314,6 +311,8 @@ i.fa-angle-double-right {
 }
 #floor-plans-blocks .container {
   width: 45%;
+  border: 1px solid #eee;
+  padding: 5% 0;
 }
 #floor-plans-blocks .container > div {
   display: flex;
@@ -372,7 +371,19 @@ i.fa-angle-double-right {
 .react-multi-carousel-list .react-multiple-carousel__arrow {
   border-radius: 0;
 }
-
+.carousel .react-multiple-carousel__arrow,
+.carousel .react-multiple-carousel__arrow:hover {
+  background-color: transparent;
+}
+.carousel .react-multiple-carousel__arrow::before {
+  font-size: 3rem;
+}
+.carousel .react-multiple-carousel__arrow--right {
+  right: 0;
+}
+.carousel .react-multiple-carousel__arrow--left {
+  left: 0;
+}
 /*=============================
     GALLERY
   ==============================*/
@@ -468,9 +479,9 @@ i.fa-angle-double-right {
   transition: 1s;
   display: block;
 }
-// .gallery div a:hover img {
-//   transform: scale(1.2);
-// }
+.gallery div a:hover img {
+  transform: scale(1.2);
+}
 /*=============================
     NEIGHBORHOOD
   ==============================*/
@@ -482,9 +493,8 @@ i.fa-angle-double-right {
   padding: 0.5em;
 }
 #neighborhood-page .tabs button span {
-  font-style: italic;
+  text-transform: uppercase;
   font-weight: bold;
-  font-size: 1.1rem;
 }
 #neighborhood-page .tabs button i {
   color: transparent;
