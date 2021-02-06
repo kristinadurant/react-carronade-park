@@ -35,7 +35,9 @@ button {
 button:focus,
 button:active,
 input:focus,
-input:active {
+input:active,
+textarea:focus,
+textarea:active {
   outline: none;
 }
 input[type="radio"] {
@@ -43,6 +45,13 @@ input[type="radio"] {
 }
 .button {
   cursor: pointer;
+}
+label .hide {
+  display: inline-block;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  color: transparent;
 }
 a {
   display: inline-block;
@@ -79,7 +88,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-h2 {
+#floor-plans-page h2 {
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -508,14 +517,15 @@ fieldset {
   border: none;
   margin-bottom: 1em;
 }
-input {
-  border: 2px solid #eee;
+input,
+textarea {
+  border: 1px solid #eee;
   background-color: #eee;
   padding: 0.25em 0.5em;
   margin-bottom: 1em;
 }
 input:focus {
-  border: 2px solid #2c333c;
+  border: 1px solid #2c333c;
 }
 input[type="checkbox"],
 input[type="radio"] {
@@ -533,13 +543,13 @@ fieldset.two-columns div {
   margin-bottom: 5%;
   margin-top: calc(5% - 1em);
 }
-.survey > p {
+.survey h2 {
   font-weight: bold;
   line-height: 1;
   margin-top: 3%;
   margin-bottom: 5%;
 }
-.survey > p span {
+.survey u {
   color: #67ddab;
   text-decoration: underline;
 }

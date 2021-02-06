@@ -1,127 +1,177 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const ScheduleTour = () => {
+    const [loading, setLoading] = useState(false);
+    const [formData, setFormData] = useState({});
+    const [features, setFeatures] = useState({
+        bed_2: false,
+        bath_1: false,
+        bath_2: false,
+        lease_1_6_months: false,
+        lease_6_12_months: false,
+        lease_year_or_more: false
+    });
+
+    const handleChange = (event) => {
+        setFormData({ ...formData, [event.target.name]: event.target.value });
+    };
+
+    const handleCheckbox = (event) => {
+        setFeatures({...features, [event.target.name]: !features[event.target.name]});
+    }
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        setLoading(true);
+
+        try {
+
+        } catch(err) {
+            console.log(err.message);
+        }
+        setLoading(false);
+    }
+    console.log({...formData, ...features});
+
     return (
         <div id='schedule-tour'>
             <h1>Send us a request for scheduling a tour.</h1>
             <section id="tour-form" className="inner">
-                <form>
-                    <label for='st-name' className='required'>Name:</label>
-                    <input type='text' id='st-name' name='name' required/>
-                    <label for='st-email' className='required'>Email Address:</label>
-                    <input type='text' id='st-email' name='email' required/>
-                    <label for='st-home-phone' className='required'>Home Phone:</label>
-                    <input type='text' id='st-home-phone' name='home phone' required/>
-                    <label for='st-work-phone'>Work Phone:</label>
-                    <input type='text' id='st-work-phone' name=''/>
-                    <label for='st-source'>How did you learn about our site:</label>
-                    <input type='text' id='st-source' name=''/>
-                    <label for='st-work-phone' className='required'>Questions/Comments:</label>
-                    <input type='textarea' id='' name='' rows="10" required/>
+                <form onSubmit={handleSubmit}>
+                    <label htmlFor='name' className='required'>Name:</label>
+                    <input onChange={handleChange} type='text' id='name' name='name' required/>
+                    <label htmlFor='email' className='required'>Email Address:</label>
+                    <input onChange={handleChange} type='email' id='email' name='email' required/>
+                    <label htmlFor='home_phone' className='required'>Home Phone:</label>
+                    <input onChange={handleChange} type='text' id='home_phone' name='home_phone' required/>
+                    <label htmlFor='work_phone'>Work Phone:</label>
+                    <input onChange={handleChange} type='text' id='work_phone' name='work_phone'/>
+                    <label htmlFor='source'>How did you learn about our site:</label>
+                    <input onChange={handleChange} type='text' id='source' name='source'/>
+                    <label htmlFor='comments' className='required'>Questions/Comments:</label>
+                    <textarea onChange={handleChange} id='comments' name='comments' rows="4" required/>
+                    
                     <div className="survey">
-                        <p>To better serve you, please take a moment to fill out our <span>optional survey.</span></p>
-                        <fieldset className="two-columns">
-                            <p>                               
-                                I am interested in the following features:
-                            </p>
+                        <h2>To better serve you, please take a moment to fill out our <u>optional survey.</u></h2>
+                                   
+                        <fieldset className="two-columns">                             
+                            <legend>I am interested in the following features:</legend>
                             <div>
-                                <input type='checkbox' id='bed-2' name='bed-2'/>
-                                <label for='bed-2'>2 Bedrooms</label>
+                                <input type='checkbox' id='bed_2' name='bed_2' onChange={handleCheckbox}/>
+                                <label htmlFor='bed_2'>2 Bedrooms</label>
                             </div>
                             <div>
-                                <input type='checkbox' id='bath-1' name='bath-1'/>
-                                <label for='bath-1'>1 Bath</label>
+                                <input type='checkbox' id='bath_1' name='bath_1' onChange={handleCheckbox}/>
+                                <label htmlFor='bath_1'>1 Bath</label>
                             </div>
                             <div>
-                                <input type='checkbox' id='bath-2' name='bath-2'/>   
-                                <label for='bath-2'>2 Baths</label>
+                                <input type='checkbox' id='bath_2' name='bath_2' onChange={handleCheckbox}/>   
+                                <label htmlFor='bath_2'>2 Baths</label>
                             </div>
                             <div>
-                                <input type='checkbox' id='lease-1-6' name='lease-1-6'/>   
-                                <label for='lease-1-6'>Lease Period: 1-6 Months</label>
+                                <input type='checkbox' id='lease_1_6' name='lease_1_6_months' onChange={handleCheckbox}/>   
+                                <label htmlFor='lease_1_6'>Lease Period: 1-6 Months</label>
                             </div>
                             <div>
-                                <input type='checkbox' id='lease-6-12' name='lease-6-12'/>   
-                                <label for='lease-6-12'>Lease Period: 6-12 Months</label>
+                                <input type='checkbox' id='lease_6_12' name='lease_6_12_months' onChange={handleCheckbox}/>   
+                                <label htmlFor='lease_6_12'>Lease Period: 6-12 Months</label>
                             </div>                           
                             <div>
-                                <input type='checkbox' id='lease-year' name='lease-year'/>   
-                                <label for='lease-year'>Lease Period: 1 Year +</label> 
+                                <input type='checkbox' id='lease_year' name='lease_year_or_more' onChange={handleCheckbox}/>   
+                                <label htmlFor='lease_year'>Lease Period: 1 Year +</label> 
                             </div>
                         </fieldset> 
-                        <fieldset className="one-column">
-                            <p>I am relocating into the area: </p>
+
+                        <fieldset className="one_column">
+                            <legend>I am relocating into the area: </legend>
                             <div>
-                                <input type='radio' id='relocating-yes' name='relocating'/>
-                                <label for='relocating-yes'>Yes</label>
+                                <input type='radio' id='relocating_yes' name='relocating' onChange={handleChange} value="yes"/>
+                                <label htmlFor='relocating_yes'>
+                                    <span className="hide">Relocation into the area </span>Yes
+                                </label>
                             </div>
                             <div>
-                                <input type='radio' id='relocating-no' name='relocating'/>
-                                <label for='relocating-no'>No</label>
+                                <input type='radio' id='relocating_no' name='relocating' onChange={handleChange} value='no'/>
+                                <label htmlFor='relocating_no'>
+                                    <span className="hide">Relocation into the area </span>No
+                                </label>
                             </div>
-                        </fieldset>                
-                        <fieldset className="one-column">
-                            <p>I have a dog:</p>
+                        </fieldset>  
+
+                        <fieldset className="one_column">
+                            <legend>I have a dog:</legend>
                             <div>
-                                <input type='radio' id='dog-yes' name='dog'/>
-                                <label for='dog-yes'>Yes</label>
+                                <input type='radio' id='dog_yes' name='dog' onChange={handleChange} value='yes' />
+                                <label htmlFor='dog_yes'><span className="hide">Dog </span>Yes</label>
                             </div>
                             <div>
-                                <input type='radio' id='dog-no' name='dog'/>
-                                <label for='dog-no'>No</label>
+                                <input type='radio' id='dog_no' name='dog' onChange={handleChange} value='no' />
+                                <label htmlFor='dog_no'><span className="hide">Dog </span>No</label>
                             </div>
                         </fieldset>
-                        <fieldset className="one-column">
-                            <p>I have a cat:</p>
+                        <fieldset className="one_column">
+                            <legend>I have a cat:</legend>
                             <div>
-                                <input type='radio' id='cat-yes' name='cat'/>
-                                <label for='cat-yes'>Yes</label>
+                                <input type='radio' id='cat_yes' name='cat' onChange={handleChange} value='yes' />
+                                <label htmlFor='cat_yes'><span className="hide">Cat </span>Yes</label>
                             </div>
                             <div>
-                                <input type='radio' id='cat-no' name='cat'/>
-                                <label for='cat-no'>No</label>
+                                <input type='radio' id='cat_no' name='cat' onChange={handleChange} value='no' />
+                                <label htmlFor='cat_no'><span className="hide">Cat </span>No</label>
                             </div>
                         </fieldset>
                         <fieldset className="two-columns">
-                            <p>I am interested in moving:</p>
+                            <legend>I am interested in moving:</legend>
                             <div>    
-                                <input type='radio' id='immediately' name='time-moving'/>
-                                <label for='immediately'>Immediately</label>
+                                <input type='radio' id='immediately' name='time_moving' onChange={handleChange} value='immediately'/>
+                                <label htmlFor='immediately'>
+                                    <span className="hide">Moving </span>Immediately
+                                </label>
                             </div>
                             <div>
-                                <input type='radio' id='month-1' name='time-moving'/>
-                                <label for='month-1'>in 1 Month</label>
+                                <input type='radio' id='month_1' name='time_moving' onChange={handleChange} value='in 1 Month'/>
+                                <label htmlFor='month_1'>
+                                    <span className="hide">Moving </span>in 1 Month
+                                </label>
                             </div>
                             <div>
-                                <input type='radio' id='months-2-3' name='time-moving'/>
-                                <label for='months-2-3'>in 2-3 Months</label>
+                                <input type='radio' id='months_2_3' name='time_moving' onChange={handleChange} value='in 2-3 Months'/>
+                                <label htmlFor='months_2_3'>
+                                    <span className="hide">Moving </span>in 2-3 Months
+                                </label>
                             </div>
                             <div>
-                                <input type='radio' id='months-2-3' name='time-moving'/>
-                                <label for='months-4-6'>in 4-6 Months</label>
+                                <input type='radio' id='months_2_3' name='time_moving' onChange={handleChange} value='in 4-6 Months' />
+                                <label htmlFor='months_4_6'>
+                                    <span className="hide">Moving </span>in 4-6 Months
+                                </label>
                             </div>
                             <div>
-                                <input type='radio' id='months-2-3' name='time-moving'/>
-                                <label for='months-7-9'>in 7-9 Months</label>
+                                <input type='radio' id='months_2_3' name='time_moving' onChange={handleChange} value='in 7-9 Months' />
+                                <label htmlFor='months_7_9'>
+                                    <span className="hide">Moving </span>in 7-9 Months
+                                </label>
                             </div>    
                             <div>
-                                <input type='radio' id='months-10' name='time-moving'/>
-                                <label for='months-10'>in 10 Months or More</label>
+                                <input type='radio' id='months_10' name='time_moving' onChange={handleChange} value='in 10 Months or More' />
+                                <label htmlFor='months_10'>
+                                    <span className="hide">Moving </span>in 10 Months or More
+                                </label>
                             </div>
                         </fieldset>
                         <fieldset className="one-column">
-                            <p>Present residence:</p>
+                            <legend>Present residence:</legend>
                             <div>
-                                <input type='radio' id='rent' name='residence'/>
-                                <label for='rent'>Rent</label>
+                                <input type='radio' id='rent' name='present_residence' onChange={handleChange} value='rent'/>
+                                <label htmlFor='rent'>Rent</label>
                             </div>
                             <div>
-                                <input type='radio' id='own' name='residence'/>
-                                <label for='own'>Own</label>
+                                <input type='radio' id='own' name='present_residence' onChange={handleChange} value='own' />
+                                <label htmlFor='own'>Own</label>
                             </div>
                         </fieldset>         
                     </div>                                                  
-                    <input className="button" type="submit" name="action" value="Schedule a Tour"></input>
+                    <button className="button" disabled={loading}>Schedule a Tour</button>
                 </form>
             </section>
         </div>
