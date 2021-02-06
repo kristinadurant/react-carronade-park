@@ -1,6 +1,4 @@
-import React, { useContext } from 'react';
-import { ModalContext } from '../context/ModalContext';
-import { SRLWrapper } from "simple-react-lightbox";
+import React from 'react';
 import { useLightbox } from 'simple-react-lightbox'
 
 const FloorPlan = ({ images }) => {

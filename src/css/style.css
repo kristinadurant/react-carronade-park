@@ -46,7 +46,7 @@ input[type="radio"] {
 .button {
   cursor: pointer;
 }
-label .hide {
+span.hide {
   display: inline-block;
   height: 1px;
   width: 1px;
@@ -524,7 +524,8 @@ textarea {
   padding: 0.25em 0.5em;
   margin-bottom: 1em;
 }
-input:focus {
+input:focus,
+textarea:focus {
   border: 1px solid #2c333c;
 }
 input[type="checkbox"],
