@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Banner from '../components/Banner';
 import images from '../data/Gallery';
 import { SRLWrapper } from "simple-react-lightbox";

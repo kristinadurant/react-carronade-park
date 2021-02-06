@@ -1,25 +1,16 @@
-import './App.css';
 import './css/style.css';
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import FloorPlans from './pages/FloorPlans';
-import Amenities from './pages/Amenities';
-import Gallery from './pages/Gallery';
-import Neighborhood from './pages/Neighborhood';
-import ScheduleTour from './pages/ScheduleTour';
 import { ModalContextProvider } from './context/ModalContext';
-import Modal from './components/Modal';
+import { Header, Footer } from './components';
+import { Home, FloorPlans, Amenities, Gallery, Neighborhood, ScheduleTour } from './pages';
 
 const App = () => {
   return (
     <ModalContextProvider>
       <BrowserRouter >
         <ScrollToTop />
-        <Modal /> 
         <Header />
         <Switch>
           <Route exact path='/' component={Home} />       
