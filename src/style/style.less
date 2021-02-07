@@ -101,7 +101,10 @@ h1 {
   letter-spacing: 0.05em;
   margin-bottom: 2rem;
 }
-section.intro p {
+p {
+  margin-bottom: 1rem;
+}
+section.intro * {
   font-size: 1.1rem;
 }
 
@@ -112,7 +115,7 @@ section.intro p {
 header {
   position: fixed;
   width: 100%;
-  background-color: #ffffffeb;
+  background-color: #ffffffc7;
   z-index: 1001;
   box-shadow: 0px 0px 5px #666;
 }
@@ -127,6 +130,7 @@ header .fa-leaf {
   align-items: center;
 }
 .logo span {
+  color: @cp-grey;
   font-size: 1.5rem;
   text-align: left;
   font-weight: bold;
@@ -150,12 +154,17 @@ header ul {
   align-items: center;
 }
 header nav a {
-  padding: 0.5em 0 0.5em 1em;
-  color: @cp-grey;
+  padding: 1em;
+  color: #5c6b7f;
   font-weight: bold;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+}
+header nav li:last-of-type a {
+  padding-right: 0;
 }
 header nav a:hover {
-  color: #000;
+  color: #111;
 }
 /*=============================
     FOOTER
@@ -169,12 +178,8 @@ footer * {
   color: #fff;
   font-weight: bold;
 }
-footer p:last-of-type {
-  margin-bottom: 1em;
-}
 footer p:first-of-type {
   font-size: 1.5rem;
-  margin-bottom: 1em;
 }
 footer p span {
   font-size: 1.1em;
@@ -193,15 +198,14 @@ footer .social a {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid @cp-accent;
+  border: 2px solid @cp-accent;
   margin: 1rem 0.75em;
-  background-color: @cp-accent;
 }
 footer .social i {
   font-size: 1.1rem;
 }
 footer .social a:hover {
-  background-color: transparent;
+  background-color: @cp-accent;
 }
 /*=============================
     BANNER
@@ -231,7 +235,7 @@ footer .social a:hover {
   font-size: 2.25rem;
   line-height: 4em;
   height: 4em;
-  color: #fff;
+  color: @cp-white;
   letter-spacing: 0.1em;
 }
 .banner-text a {
@@ -240,7 +244,7 @@ footer .social a:hover {
   height: 2.5rem;
   width: 3rem;
   font-size: 1.3rem;
-  color: #fff;
+  color: @cp-white;
   transform: rotate(90deg);
 }
 .banner-text a::before {
@@ -254,8 +258,9 @@ footer .social a:hover {
 /*=============================
     HOME
   ==============================*/
-#home-page section.intro {
-  max-width: 1400px;
+#home-page .intro a {
+  color: @cp-accent;
+  font-weight: bold;
 }
 #home-page-blocks > div {
   width: 32%;
@@ -390,7 +395,7 @@ section.bg-grey.carousel {
 }
 .carousel .react-multi-carousel-dot:hover button,
 .carousel .react-multi-carousel-dot--active button {
-  background-color: @cp-accent;
+  background-color: @cp-grey;
 }
 .carousel .next,
 .carousel .previous {
@@ -520,7 +525,6 @@ section.bg-grey.carousel {
 }
 .map-carousel li.react-multi-carousel-item p:first-of-type {
   font-weight: bold;
-  margin-bottom: 1em;
   text-transform: uppercase;
 }
 .map-carousel li.react-multi-carousel-item span {
@@ -533,17 +537,17 @@ section.bg-grey.carousel {
     SCHEDULE A TOUR
   ==============================*/
 #schedule-tour h1 {
-  padding: 10% 0 5%;
+  padding: 15% 0 7%;
   background-color: inherit;
   color: inherit;
 }
 #tour-form form {
-  display: flex;
-  flex-direction: column;
-  display: flex;
-  flex-direction: column;
   max-width: 600px;
   margin: auto;
+}
+#tour-form form {
+  background-color: #eee;
+  padding: 5%;
 }
 #tour-form form * {
   text-align: left;
@@ -558,9 +562,16 @@ fieldset {
 input,
 textarea {
   border: @thin-border;
-  background-color: #eee;
+  // background-color: #eee;
   padding: 0.25em 0.5em;
   margin-bottom: 1em;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  display: block;
+  width: 100%;
 }
 input:focus,
 textarea:focus {
@@ -572,25 +583,37 @@ input[type="radio"] {
   vertical-align: middle;
   margin-bottom: 0;
 }
-fieldset.two-columns div {
-  width: 50%;
-  display: inline-block;
+form input::placeholder,
+form input:-ms-input-placeholder,
+form input::-ms-input-placeholder,
+form input::-webkit-input-placeholder {
+  color: #b7b7b7 !important;
+  font-size: 0.9em !important;
+}
+fieldset.two-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+fieldset.two-columns > div {
+  width: 49%;
 }
 .survey {
-  border: @thin-border;
+  border: 1px solid #999;
   padding: 0 5%;
-  margin-bottom: 5%;
-  margin-top: calc(5% - 1em);
+  margin-bottom: 10%;
+  margin-top: 10%;
 }
 .survey h2 {
   font-weight: bold;
   line-height: 1;
   margin-top: 3%;
   margin-bottom: 5%;
+  text-align: center !important;
 }
 .survey u {
   color: @cp-accent;
-  text-decoration: underline;
+  // text-decoration: underline;
 }
 label.required::after {
   content: " *";

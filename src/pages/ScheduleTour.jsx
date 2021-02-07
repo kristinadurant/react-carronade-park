@@ -25,20 +25,40 @@ const ScheduleTour = () => {
             <section id="tour-form" className="inner"> 
                 {!success?
                 <>
-                <h1>Send us a request for scheduling a tour.</h1>     
+                <h1>Send us a request for scheduling a tour.</h1>  
                 <form onSubmit={handleSubmit}>
-                    <label htmlFor='name' className='required'>Name:</label>
-                    <input type='text' id='name' name='name' required/>
-                    <label htmlFor='email' className='required'>Email Address:</label>
-                    <input type='email' id='email' name='email' required/>
-                    <label htmlFor='home_phone' className='required'>Home Phone:</label>
-                    <input type='text' id='home_phone' name='home_phone' required/>
-                    <label htmlFor='work_phone'>Work Phone:</label>
-                    <input type='text' id='work_phone' name='work_phone'/>
-                    <label htmlFor='source'>How did you learn about our site:</label>
-                    <input type='text' id='source' name='source'/>
-                    <label htmlFor='comments' className='required'>Questions/Comments:</label>
-                    <textarea id='comments' name='comments' rows="4" required/>
+                    <div>
+                        <label htmlFor='name' className='required' >Name:</label>
+                        <input type='text' id='name' name='name' required autoFocus/>
+                    </div>
+                    <div>
+                        <label htmlFor='email' className='required'>Email Address:</label>
+                        <input type='email' id='email' name='email' required/>
+                    </div>
+                    <fieldset className='two-columns'>
+                        <div>
+                            <label htmlFor='home_phone' className='required'>Home Phone:</label>
+                            <input 
+                                type='tel' id='home_phone' name='home_phone' 
+                                pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$" required
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor='work_phone'>Work Phone:</label>
+                            <input 
+                                type='tel' id='work_phone' name='work_phone'
+                                pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$"
+                            />
+                        </div>
+                    </fieldset>
+                    <div>
+                        <label htmlFor='source'>How did you learn about our site:</label>
+                        <input type='text' id='source' name='source'/>
+                    </div>
+                    <div>
+                        <label htmlFor='comments' className='required'>Questions/Comments:</label>
+                        <textarea id='comments' name='comments' rows="4" required/>
+                    </div>
                     
                     <div className="survey">
                         <h2>To better serve you, please take a moment to fill out our <u>optional survey.</u></h2>

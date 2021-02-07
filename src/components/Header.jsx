@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../images/carronade_park_logo2.png';
 
 const Header = () => {
     return (

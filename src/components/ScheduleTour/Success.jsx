@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Success = ({ email }) => {
+const Success = () => {
 
     return (
         <div className='success-form'>

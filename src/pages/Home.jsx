@@ -20,7 +20,7 @@ const Home = () => {
                 This area was once a battlefield in the War of 1812 and has a museum that commemorates 
                 the historical event. Perrysburg’s Historical District preserves the original architecture 
                 of Perrysburg, while downtown comes to life during the summer months with parades and farmers markets.</p>
-                <p>Apartments for rent in Perrysburg Ohio.</p>
+                <Link to='/carronade-park-schedule-tour'>Schedule a tour in Carronade Park.</Link>
             </section>
             <section id="home-page-blocks" className="inner-wide">
                 <div>
