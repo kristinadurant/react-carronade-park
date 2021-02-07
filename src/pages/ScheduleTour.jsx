@@ -1,27 +1,31 @@
 import React, { useState } from 'react';
 import sendEmail from '../emailjs';
+import { Success } from '../components';
 
 const ScheduleTour = () => {
     const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(true);
 
     const handleSubmit = async (event) => {
         const form = event.target;
         event.preventDefault();
         setLoading(true);
         try {
-            sendEmail(event);
+            // sendEmail(event);
             form.reset();
+            setSuccess(true);
         } catch(err) {
             console.log(err.message);
         }
         setLoading(false);
     }
 
-
-    return (
-        <div id='schedule-tour'>
-            <h1>Send us a request for scheduling a tour.</h1>
-            <section id="tour-form" className="inner">
+    return (    
+        <main id='schedule-tour'>
+            <section id="tour-form" className="inner"> 
+                {!success?
+                <>
+                <h1>Send us a request for scheduling a tour.</h1>     
                 <form onSubmit={handleSubmit}>
                     <label htmlFor='name' className='required'>Name:</label>
                     <input type='text' id='name' name='name' required/>
@@ -38,7 +42,7 @@ const ScheduleTour = () => {
                     
                     <div className="survey">
                         <h2>To better serve you, please take a moment to fill out our <u>optional survey.</u></h2>
-                                   
+                                
                         <fieldset className="two-columns">                             
                             <legend>I am interested in the following features:</legend>
                             <div>
@@ -156,10 +160,13 @@ const ScheduleTour = () => {
                             </div>
                         </fieldset>         
                     </div>                                                  
-                    <button className="button" disabled={loading}>Schedule a Tour</button>
+                    <button className="button" disabled={loading}>Schedule a Tour</button>                
                 </form>
+                </>
+                : <Success />
+                }          
             </section>
-        </div>
+        </main>
     )
 }
 

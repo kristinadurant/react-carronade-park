@@ -41,8 +41,8 @@ const MapCarousel = ({ markers }) => {
                 <p>{marker.description}</p>
                 <p>
                   <span>{marker.distance}</span>                         
-                  {marker.bike && <span><i class="fas fa-biking"></i>{marker.bike}</span> }
-                  {marker.car && <span><i class="fas fa-car-side"></i>{marker.car}</span>}
+                  {marker.bike && <span><i className="fas fa-biking"></i>{marker.bike}</span> }
+                  {marker.car && <span><i className="fas fa-car-side"></i>{marker.car}</span>}
                 </p>
               </div>
           );

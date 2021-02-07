@@ -81,6 +81,9 @@ section.intro {
   margin-top: 3vw;
   max-width: 800px;
 }
+main {
+  min-height: 70vh;
+}
 /*=============================
     TYPOGRAPHY
 ==============================*/
@@ -103,39 +106,7 @@ h1 {
 section.intro p {
   font-size: 1.1rem;
 }
-/*=============================
-    MODAL
-  ==============================*/
-.full-modal {
-  min-height: 100vh;
-  min-width: 100vw;
-  z-index: 99;
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.full-modal .overlay {
-  height: 100%;
-  width: 100%;
-  background-color: #000c;
-  position: absolute;
-}
-.full-modal .container {
-  position: relative;
-}
-.full-modal .close {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-}
-.full-modal .close i {
-  font-size: 2rem;
-  color: #fff;
-}
-.full-modal .close:hover i {
-  color: @cp-accent;
-}
+
 /*=============================
     HEADER
   ==============================*/
@@ -555,7 +526,7 @@ i.fa-angle-double-right {
   max-width: 600px;
   margin: auto;
 }
-#tour-form * {
+#tour-form form * {
   text-align: left;
 }
 #tour-form .button {
@@ -605,6 +576,13 @@ fieldset.two-columns div {
 label.required::after {
   content: " *";
   color: red;
+}
+.success-form {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 /*=============================
     RESPONSIVE DESIGN

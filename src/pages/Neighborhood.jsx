@@ -9,7 +9,7 @@ const Neighborhood = () => {
     const categories = Object.keys(maps);
 
     return (
-        <div id="neighborhood-page">
+        <main id="neighborhood-page">
             <Banner text={'explore your neighborhood'} image={'https://res.cloudinary.com/carronadepark/image/upload/v1611351435/Neighborhood/Poster_2_Large_1_maemqb.jpg'}/>
             <section className="inner intro">
                 <p>Dining, entertainment, shopping, schools are all nearby with Fort Meigs at Levis Apartments. 
@@ -37,7 +37,7 @@ const Neighborhood = () => {
             <section style={{maxWidth: '100%', margin: 'auto'}}>
                 <MapCarousel markers={maps[tab].markers}/>     
             </section>
-        </div>
+        </main>
     )
 }
 

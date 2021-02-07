@@ -41,7 +41,7 @@ const FloorPlans = () => {
     ]
 
     return (
-        <div id="floor-plans-page">
+        <main id="floor-plans-page">
             <Banner text={'Floor Plans'} image={'https://res.cloudinary.com/carronadepark/image/upload/v1611285585/Gallery/IMG_1716_Large_s75upg.jpg'}/>
             <section className="inner intro">
                 <p>Floorplans are available for two groups of apartments, Fort Meigs at Levis and Williamsburg West. 
@@ -66,7 +66,7 @@ const FloorPlans = () => {
                 ))}
                 </SRLWrapper>
             </section>
-        </div>
+        </main>
     )
 }
 

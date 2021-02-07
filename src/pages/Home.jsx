@@ -4,7 +4,7 @@ import Banner from '../components/Banner';
 
 const Home = () => {
     return (
-        <div id="home-page">
+        <main id="home-page">
             <Banner text={'Carronade Park Townhomes'} />
             <section className="inner-wide intro">
                 <p>Perrysburg, Ohio is a suburb of Toledo with a population of about 20,600. 
@@ -33,7 +33,6 @@ const Home = () => {
                     </Link>
                     <div className="title">                       
                         <Link to='/carronade-park-floor-plans'>
-                            {/* <i class="fas fa-angle-double-right"></i> */}
                             Floor Plans
                         </Link>
                     </div>
@@ -48,7 +47,6 @@ const Home = () => {
                     </Link>
                     <div className="title">  
                         <Link to='/carronade-park-amenities'>
-                            {/* <i class="fas fa-angle-double-right"></i> */}
                             Amenities
                         </Link>
                     </div>
@@ -62,13 +60,12 @@ const Home = () => {
                     </Link>
                     <div className="title">  
                         <Link to='/carronade-park-neighborhood'>
-                            {/* <i class="fas fa-angle-double-right"></i> */}
                             Neighborhood
                         </Link>
                     </div>
                 </div>
             </section>
-        </div>
+        </main>
     )
 }
 

@@ -6,7 +6,7 @@ import amenitiesList from '../data/AmenitiesList';
 const Amenities = () => {
     console.log(amenitiesList)
     return (
-        <div id="amenities-page">
+        <main id="amenities-page">
             <Banner text={'Modern Amenities'} image={'https://res.cloudinary.com/carronadepark/image/upload/v1611285586/Gallery/IMG_1654_Large_wey2ri.jpg'}/>
             <section className="inner intro">
                 <p>Carronade park homes come fully equipped with all of the modern upgrades 
@@ -29,7 +29,7 @@ const Amenities = () => {
                     })}
                 </ul>
             </section>
-        </div>
+        </main>
     )
 }
 
