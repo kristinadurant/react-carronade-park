@@ -3,8 +3,8 @@ import React from 'react'
 const Footer = () => {
     return (
         <footer>
-           <p>Fort Meigs at Levis Apartments / Schoen Builders</p> 
-            <p>134 W South Boundary Street   •   Suite B   •   Perrysburg, Ohio 43551</p>   
+           <p>Fort Meigs at Levis Apartments <span>/</span> Schoen Builders</p> 
+            <p>134 W South Boundary Street <span>•</span> Suite B <span>•</span> Perrysburg, Ohio 43551</p>   
             <p>Phone: 419-873-9933</p>
             <div className="social">
             <a href="https://www.facebook.com/schoenbuilders" rel="noreferrer" target='_blank'>

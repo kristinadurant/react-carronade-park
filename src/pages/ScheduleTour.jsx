@@ -4,7 +4,7 @@ import { Success } from '../components';
 
 const ScheduleTour = () => {
     const [loading, setLoading] = useState(false);
-    const [success, setSuccess] = useState(true);
+    const [success, setSuccess] = useState(false);
 
     const handleSubmit = async (event) => {
         const form = event.target;

@@ -22,7 +22,8 @@ const Amenities = () => {
                     {amenitiesList.map((item, index) => {
                        return (
                             <li key={index}>
-                                <i className="fas fa-angle-double-right"></i>
+                                {/* <i className="fas fa-angle-double-right"></i> */}
+                                <span>•</span>
                                 {item}
                             </li>
                        )
