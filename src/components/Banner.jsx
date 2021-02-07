@@ -13,6 +13,7 @@ const Banner = ({ text, image }) => {
             </div>
             <div id ='main' className="banner-text">
                 <HashLink smooth to='#main'>
+                    <span className='hide'>scroll to main content</span>
                 </HashLink>
                 <h1>{text}</h1>
             </div>  

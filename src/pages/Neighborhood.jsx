@@ -16,7 +16,7 @@ const Neighborhood = () => {
                     In Perrysburg, you will find a combination of modern luxuries in a convenient location 
                     providing easy access to major interstates. Look no further for Perrysburg apartments, your new location to call Home</p>
             </section>
-            <section className="carousel">
+            <section className="carousel bg-grey">
                 <AmenitiesCarousel />
             </section>
             <section className=" map">

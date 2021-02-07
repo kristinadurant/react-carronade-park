@@ -1,12 +1,15 @@
-* {
-  transition: color 500ms, background-color 500ms;
-}
 .bg-image {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+.bg-grey {
+  background-color: #eee;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
 * {
+  transition: color 500ms, background-color 500ms;
   color: #111;
   text-decoration: none;
   margin: 0;
@@ -277,7 +280,7 @@ footer .social a:hover {
   bottom: 5%;
   width: 70%;
   left: 15%;
-  padding: 1rem;
+  padding: 5% 0;
 }
 i.fa-angle-double-right {
   color: #67ddab;
@@ -345,11 +348,13 @@ i.fa-angle-double-right {
 /*=============================
     AMENITIES
 ==============================*/
-#amenities-page section.carousel {
+section.bg-grey.carousel {
   margin-bottom: 5vw;
+  position: relative;
 }
-.amenities-carousel {
+.bg-grey.carousel .react-multi-carousel-list {
   max-width: 800px;
+  width: 70%;
   margin: auto;
 }
 .amenities-list ul {
@@ -367,21 +372,44 @@ i.fa-angle-double-right {
   margin-right: 0.3rem;
   font-size: 1.1em;
 }
-.react-multi-carousel-list .react-multiple-carousel__arrow {
-  border-radius: 0;
+.carousel .react-multi-carousel-dot-list {
+  bottom: 4%;
 }
-.carousel .react-multiple-carousel__arrow,
-.carousel .react-multiple-carousel__arrow:hover {
-  background-color: transparent;
+.carousel .react-multi-carousel-dot button {
+  border-color: black;
+  background-color: white;
+  height: 0.8rem;
+  width: 0.8rem;
 }
-.carousel .react-multiple-carousel__arrow::before {
-  font-size: 3rem;
+.carousel .react-multi-carousel-dot:hover button,
+.carousel .react-multi-carousel-dot--active button {
+  background-color: #67ddab;
 }
-.carousel .react-multiple-carousel__arrow--right {
-  right: 0;
+.carousel .next,
+.carousel .previous {
+  font-family: revicons;
+  font-size: 3em;
+  top: calc(50% - 1.5rem);
+  line-height: 1;
+  position: absolute;
+  padding: 0 0.5em;
+  color: #2c333c;
 }
-.carousel .react-multiple-carousel__arrow--left {
-  left: 0;
+.carousel .next {
+  right: calc(50% - 500px);
+}
+.carousel .previous {
+  left: calc(50% - 500px);
+}
+.carousel .next::before {
+  content: "\e825";
+}
+.carousel .previous::before {
+  content: "\e824";
+}
+.carousel .previous:hover,
+.carousel .next:hover {
+  color: #67ddab;
 }
 /*=============================
     GALLERY

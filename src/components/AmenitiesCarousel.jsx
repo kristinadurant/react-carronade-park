@@ -20,20 +20,39 @@ const responsive = {
     paritialVisibilityGutter: 30
   }
 };
-
+const CustomArrows = ({ next, previous, ...rest }) => {
+  const {
+    onMove,
+    carouselState: { currentSlide, deviceType }
+  } = rest;
+  return (
+    <>
+      <button className={currentSlide === 0 ? 'disable previous' : 'previous'} onClick={() => previous()}>
+        <span className='hide'>Previous</span>
+      </button>
+      <button className='next' onClick={() => next()}>
+        <span className='hide'>Next</span>
+      </button>
+    </>
+  );
+};
 const AmenitiesCarousel = () => {
 
     return (
       <Carousel
         keyBoardControl
+        swipeable={true}
+        showDots
+        renderDotsOutside
         infinite
         autoPlay
         autoPlaySpeed={5000}
         customTransition="all 1s"
         transitionDuration={1000}
         responsive={responsive}
-        containerClass="amenities-carousel"
         renderButtonGroupOutside={true}
+        customButtonGroup={<CustomArrows />}
+        arrows={false}
       >
         {amenities.map((item, index) => {
           return (

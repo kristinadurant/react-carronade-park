@@ -14,7 +14,7 @@ const Amenities = () => {
                 with maintenance free exclusive amenities for all residents to enjoy and 
                 share with friends and family.</p>
             </section>
-            <section className="carousel inner">    
+            <section className="carousel bg-grey">    
                 <AmenitiesCarousel />
             </section>
             <section className="amenities-list">
