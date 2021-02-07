@@ -1,4 +1,4 @@
-import './css/style.css';
+import './style/style.css';
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';
