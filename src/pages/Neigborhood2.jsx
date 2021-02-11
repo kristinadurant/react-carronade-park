@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import MapCarousel from '../components/Neighborhood/MapCarousel';
+import MapCarousel from '../components/MapCarousel';
 import Banner from '../components/Banner';
 import maps from '../data/Neighborhood';
 import AmenitiesCarousel from '../components/AmenitiesCarousel';
-import Map from '../components/Neighborhood/Map';
 
 const Neighborhood = () => {
     const [tab, setTab] = useState('Shopping');
@@ -32,7 +31,7 @@ const Neighborhood = () => {
                     ))}
                 </ul>
                 <div className="map-container">
-                    <Map />
+                    <iframe frameborder="0" src={maps[tab].url} width="100%" height="480"></iframe>
                 </div>
             </section>
             <section style={{maxWidth: '100%', margin: 'auto'}}>

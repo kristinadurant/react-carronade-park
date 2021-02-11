@@ -1,6 +1,7 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import Distance from './Distance';
 
 const responsive = {
   desktop: {
@@ -39,11 +40,7 @@ const MapCarousel = ({ markers }) => {
               <div key={index}>
                 <p>{marker.name}</p>
                 <p>{marker.description}</p>
-                <p>
-                  <span>{marker.distance}</span>                         
-                  {marker.bike && <span><i className="fas fa-biking"></i>{marker.bike}</span> }
-                  {marker.car && <span><i className="fas fa-car-side"></i>{marker.car}</span>}
-                </p>
+                <Distance distance={marker.distance} bike={marker.bike} car={marker.car} />
               </div>
           );
         })}
