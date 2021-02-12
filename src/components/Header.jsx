@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+    const [open, setOpen] = useState(false);
     return (
         <header>
             <div className="inner-wide">
@@ -27,6 +28,10 @@ const Header = () => {
                         </li>
                     </ul>
                 </nav>
+                <button onClick={() => setOpen(true)} className='open-menu'>
+                    <i class="fas fa-bars"></i>
+                    <span className='hide'>Open menu</span>
+                </button>
             </div>
         </header>
     )

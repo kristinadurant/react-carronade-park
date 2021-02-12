@@ -53,6 +53,7 @@ const AmenitiesCarousel = () => {
         renderButtonGroupOutside={true}
         customButtonGroup={<CustomArrows />}
         arrows={false}
+        className="inner"
       >
         {amenities.map((item, index) => {
           return (

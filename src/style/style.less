@@ -72,10 +72,10 @@ a {
   width: 90%;
 }
 .inner {
-  width: 75%;
+  width: 60%;
   margin-right: auto;
   margin-left: auto;
-  max-width: 1100px;
+  max-width: 1000px;
 }
 section {
   margin-bottom: 5vw;
@@ -165,6 +165,13 @@ header nav li:last-of-type a {
 header nav a:hover {
   color: #111;
 }
+/*=============================
+    HEADER MOBILE
+  ==============================*/
+header .open-menu {
+  display: none;
+}
+
 /*=============================
     FOOTER
   ==============================*/
@@ -323,9 +330,8 @@ i.fa-angle-double-right {
   justify-content: center;
   margin: 10% auto;
 }
-#floor-plans-blocks .container img {
-  width: 20vw;
-  max-width: 200px;
+#floor-plans-blocks .container div div {
+  width: 40%;
   cursor: pointer;
 }
 
@@ -368,15 +374,22 @@ section.bg-grey.carousel {
   width: 70%;
   margin: auto;
 }
-.amenities-list ul {
-  border: 2px solid @cp-accent;
-  padding: 2% 5%;
-  display: inline-block;
+.amenities-list {
   margin: auto;
+  display: flex;
+  justify-content: space-between;
 }
-.amenities-list li {
+.amenities-list div {
+  width: 30%;
+  padding: 2% 0;
+}
+.amenities-list .divider {
+  border-right: 1px solid @cp-accent;
+}
+.amenities-list .title {
   margin-bottom: 0.5em;
   font-weight: bold;
+  text-transform: uppercase;
 }
 .amenities-list li span {
   color: @cp-accent;
@@ -576,9 +589,6 @@ button.marker:hover {
   height: 2rem;
   font-size: 1.5rem;
 }
-.mapboxgl-popup-content .title {
-  margin-bottom: 0.65em;
-}
 .mapboxgl-popup-content .title a:hover {
   color: @cp-accent;
 }
@@ -600,7 +610,7 @@ button.marker:hover {
     SCHEDULE A TOUR
   ==============================*/
 #schedule-tour h1 {
-  padding: 15% 0 7%;
+  padding: 20% 0 5%;
   background-color: inherit;
   color: inherit;
 }
@@ -693,17 +703,84 @@ label.required::after {
     RESPONSIVE DESIGN
 ==============================*/
 @media only screen and (max-width: 1443px) {
-  .grid-container {
-    height: 1400px;
+  h1 {
+    font-size: 1.5rem;
+  }
+  .button {
+    font-size: 0.75rem;
+  }
+  .banner-text h1 {
+    font-size: 2rem;
+  }
+  .banner-text a {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+  }
+  .banner-text a::before {
+    line-height: 2.5rem;
+  }
+  section.intro * {
+    font-size: 1rem;
+  }
+  #home-page-blocks a {
+    font-size: 1rem;
+  }
+  footer p:first-of-type {
+    font-size: 1.25rem;
+  }
+  footer p:nth-of-type(n + 2) {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  footer .social a {
+    width: 2rem;
+    height: 2rem;
+    border-width: 1px;
+    margin: 0.5em;
+  }
+  footer .social i {
+    font-size: 1rem;
+  }
+  #floor-plans-page h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  #floor-plans-blocks .details span {
+    font-size: 0.75rem992;
   }
 }
-@media only screen and (max-width: 1329px) {
-  .grid-container {
-    height: 1500px;
+@media only screen and (max-width: 1199px) {
+  .inner-wide {
+    width: 95%;
+  }
+  .inner {
+    width: 70%;
+  }
+  section {
+    margin-bottom: 8vw;
+  }
+  section.intro {
+    margin-top: 8vw;
+  }
+  .banner {
+    height: auto;
+    min-height: auto;
+  }
+  .carousel .next {
+    right: calc(50% - 450px);
+  }
+  .carousel .previous {
+    left: calc(50% - 450px);
+  }
+  .amenities-list .divider:first-of-type,
+  .amenities-list .divider:last-of-type {
+    display: none;
   }
 }
-@media only screen and (max-width: 922px) {
-  .grid-container {
-    height: 960px;
-  }
+@media only screen and (max-width: 991px) {
+}
+@media only screen and (max-width: 767px) {
+}
+@media only screen and (max-width: 575px) {
 }

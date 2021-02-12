@@ -4,7 +4,8 @@ import Banner from '../components/Banner';
 import amenitiesList from '../data/AmenitiesList';
 
 const Amenities = () => {
-    console.log(amenitiesList)
+    const ulTitle = Object.keys(amenitiesList);
+
     return (
         <main id="amenities-page">
             <Banner text={'Modern Amenities'} image={'https://res.cloudinary.com/carronadepark/image/upload/v1611285586/Gallery/IMG_1654_Large_wey2ri.jpg'}/>
@@ -17,18 +18,25 @@ const Amenities = () => {
             <section className="carousel bg-grey">    
                 <AmenitiesCarousel />
             </section>
-            <section className="amenities-list">
-                <ul>
-                    {amenitiesList.map((item, index) => {
-                       return (
-                            <li key={index}>
-                                {/* <i className="fas fa-angle-double-right"></i> */}
-                                <span>•</span>
-                                {item}
-                            </li>
-                       )
-                    })}
-                </ul>
+            <section className="amenities-list inner-wide">
+                <span className="divider"></span>
+                {ulTitle.map((item, index) => {
+                    return (      
+                        <>
+                        <div key={index}>
+                            <p className="title">{item}</p>
+                            <ul>
+                                {amenitiesList[item].map((item, index) => {
+                                return (
+                                        <li key={index}>
+                                            <span>-</span>{item}
+                                        </li>
+                                )})}
+                            </ul>
+                        </div>
+                        <span className="divider"></span>
+                        </>
+                    )})}
             </section>
         </main>
     )
