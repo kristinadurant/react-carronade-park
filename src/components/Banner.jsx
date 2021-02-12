@@ -11,8 +11,8 @@ const Banner = ({ text, image }) => {
                 : <BannerCarousel />
                 }
             </div>
-            <div id ='main' className="banner-text">
-                <HashLink smooth to='#main'>
+            <div className="banner-text">
+                <HashLink smooth to='#main' id='main'>
                     <span className='hide'>scroll to main content</span>
                 </HashLink>
                 <h1>{text}</h1>
