@@ -22,7 +22,7 @@ const Markers = ({ category }) => {
                 coordinates={marker.coordinates}
             >    
                 <button className="marker" onClick={ () => setSelected(marker)}>
-                    <i className="fas fa-shopping-bag"></i>
+                    <i className={`fas ${marker.icon}`}></i>
                     <span className='hide'>shopping</span>
                 </button>
                 <p>{marker.name}</p>
@@ -41,7 +41,7 @@ const Markers = ({ category }) => {
                     </a>
                 </p>
                 <p>{selected.address}</p>
-                <Distance distance={selected.distance} bike={selected.bike} car={selected.car} />
+                <Distance distance={selected.distance} bike={selected.bike} car={selected.car} walk={selected.walk}/>
             </Popup>
         }</>
     )

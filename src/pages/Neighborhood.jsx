@@ -6,7 +6,7 @@ import AmenitiesCarousel from '../components/AmenitiesCarousel';
 import Map from '../components/Neighborhood/Map';
 
 const Neighborhood = () => {
-    const [tab, setTab] = useState('Shopping');
+    const [tab, setTab] = useState(null);
     const categories = Object.keys(maps);
 
     return (
@@ -25,7 +25,6 @@ const Neighborhood = () => {
                     {categories.map((item) => (
                         <li key={item}>
                             <button onClick={()=> setTab(item)}>
-                                <i className="fas fa-angle-double-right"></i>
                                 <span>{item}</span>
                             </button>
                         </li>
@@ -35,9 +34,11 @@ const Neighborhood = () => {
                     <Map category={tab} />
                 </div>
             </section>
-            <section style={{maxWidth: '100%', margin: 'auto'}}>
-                <MapCarousel markers={maps[tab].markers}/>     
-            </section>
+            {tab &&
+                <section style={{maxWidth: '100%', margin: 'auto'}}>
+                    <MapCarousel markers={maps[tab].markers}/>     
+                </section>
+            }
         </main>
     )
 }

@@ -1,12 +1,18 @@
 import React from 'react';
 
-const Distance = ({ distance, bike, car}) => {
+const Distance = ({ distance, bike, car, walk}) => {
     return (
         <p className="distance">
 
             <span>{distance}</span>
-
-            {bike && 
+            {walk?  
+            <>
+                <span><i className="fas fa-walking"></i>{bike}</span>
+                <span className="hide">walk distance</span> 
+            </>
+            : null
+            }
+            { bike && 
             <>
                 <span><i className="fas fa-biking"></i>{bike}</span>
                 <span className="hide">bike distance</span> 

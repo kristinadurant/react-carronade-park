@@ -22,7 +22,7 @@ const Map = ({ category }) => {
                 <i className="fas fa-home"></i>
                 <p>You are here</p>          
             </Marker>
-            <Markers category={category}/>
+            {category && <Markers category={category}/>}
         </Mapbox>
     )
 }

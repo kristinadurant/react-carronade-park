@@ -5,6 +5,7 @@ const maps =
             markers: [
                 { 
                     name: 'Target',
+                    icon: 'fa-shopping-bag',
                     description: 'Target Corporation is an American retail corporation offering home goods, clothing, electronics & more, plus exclusive designer collections.',
                     distance: '2.1 miles',
                     bike: '10 min',
@@ -16,6 +17,7 @@ const maps =
                 },
                 { 
                     name: 'Kohls',
+                    icon: 'fa-shopping-bag',
                     description: "Kohl's is an American chain department store offering a wide selection of brand-name clothing, accessories & homewares.",
                     distance: '1.1 miles',
                     bike: '6 min',
@@ -27,6 +29,7 @@ const maps =
                 },
                 { 
                     name: 'Hobby Lobby',
+                    icon: 'fa-shopping-bag',
                     description: 'Hobby Lobby offers over 70,000 items featuring home decor, seasonal decor, tableware, floral, art supplies, craft supplies, yarn, fabric, jewelry making, hobbies and much more.',
                     distance: '1.5 miles',
                     bike: '7 min',
@@ -38,6 +41,7 @@ const maps =
                 },
                 { 
                     name: 'The Towne Center At Levis Commons',
+                    icon: 'fa-shopping-bag',
                     description: 'The Town Center at Levis Commons includes premier retail, lifestyle, office, restaurants and entertainment uses in an open-air, traditional Main Street environment.',
                     distance: '3.9 miles',
                     bike: '21 min',
@@ -49,6 +53,7 @@ const maps =
                 },
                 { 
                     name: 'Shoppes At Riverplace',
+                    icon: 'fa-shopping-bag',
                     description: 'The Shoppes at RiverPlace is your one-stop destination. Unparalleled quality shopping, dining, health, style, travel, spirits, licensing, entertainment, financial services and more.',
                     distance: '3.2 miles',
                     bike:  '17 min',
@@ -64,43 +69,8 @@ const maps =
             url: 'https://www.google.com/maps/d/embed?mid=1-Q3xkJ7sBxsxTRAgJnHprjMG_IX7wtp9&hl',
             markers: [
                 { 
-                    name: 'Kroger',
-                    description: 'Large supermarket chain with deli & bakery departments, plus health & beauty aids, passport photos.',
-                    distance: '0.7 miles',
-                    walk: '14 min',
-                    bike: '3 min',
-                    car: '4 min',
-                    coordinates: [-83.59818, 41.54542],
-                    address: '27322 Carronade Dr, Perrysburg, OH 43551',
-                    url: 'https://www.kroger.com/stores/details/016/00548?cid=loc_01600548_gmb',
-                    google_url: 'https://maps.google.com/?cid=13611087061256487020'
-                },
-                { 
-                    name: 'Meijer',
-                    description: "Chain retailer featuring groceries, apparel, electronics and more.",
-                    distance: '1.4 miles',
-                    walk: '29min',
-                    bike: '7 min',
-                    car: '7 min',
-                    coordinates: [-83.58944, 41.54683],
-                    address: '10055 US-20, Rossford, OH 43460',
-                    url: 'https://www.meijer.com/shop/en/store/211/?cmpid=OLA:040319:GoogleGrocery',
-                    google_url: 'https://maps.google.com/?cid=5767109147491965425'
-                },
-                { 
-                    name: 'Aldi',
-                    description: 'Grocery store',
-                    distance: '1.7 miles',
-                    walk: '36min',
-                    bike: '7 min',
-                    car: '6 min',
-                    coordinates: [-83.5844, 41.54822],
-                    address: '9806 S Compass Dr, Rossford, OH 43460',
-                    url: 'https://www.aldi.us/en/weekly-specials/our-weekly-ads/?pk_campaign=Corporate&pk_source=WebClick&pk_medium=local_listing',
-                    google_url: 'https://maps.google.com/?cid=2307304953058631692'
-                },
-                { 
                     name: 'Walmart',
+                    icon: 'fa-store',
                     description: 'Department store',
                     distance: '1.5 miles',
                     walk: '31 min',
@@ -112,7 +82,47 @@ const maps =
                     google_url: 'https://maps.google.com/?cid=1000689245601466120'
                 },
                 { 
+                    name: 'Meijer',
+                    icon: 'fa-store',
+                    description: "Chain retailer featuring groceries, apparel, electronics and more.",
+                    distance: '1.4 miles',
+                    walk: '29min',
+                    bike: '7 min',
+                    car: '7 min',
+                    coordinates: [-83.58944, 41.54683],
+                    address: '10055 US-20, Rossford, OH 43460',
+                    url: 'https://www.meijer.com/shop/en/store/211/?cmpid=OLA:040319:GoogleGrocery',
+                    google_url: 'https://maps.google.com/?cid=5767109147491965425'
+                },
+                { 
+                    name: 'Kroger',
+                    icon: 'fa-store',
+                    description: 'Large supermarket chain with deli & bakery departments, plus health & beauty aids, passport photos.',
+                    distance: '0.7 miles',
+                    walk: '14 min',
+                    bike: '3 min',
+                    car: '4 min',
+                    coordinates: [-83.59818, 41.54542],
+                    address: '27322 Carronade Dr, Perrysburg, OH 43551',
+                    url: 'https://www.kroger.com/stores/details/016/00548?cid=loc_01600548_gmb',
+                    google_url: 'https://maps.google.com/?cid=13611087061256487020'
+                },
+                { 
+                    name: 'Aldi',
+                    icon: 'fa-store',
+                    description: 'Grocery store',
+                    distance: '1.7 miles',
+                    walk: '36min',
+                    bike: '7 min',
+                    car: '6 min',
+                    coordinates: [-83.5844, 41.54822],
+                    address: '9806 S Compass Dr, Rossford, OH 43460',
+                    url: 'https://www.aldi.us/en/weekly-specials/our-weekly-ads/?pk_campaign=Corporate&pk_source=WebClick&pk_medium=local_listing',
+                    google_url: 'https://maps.google.com/?cid=2307304953058631692'
+                },
+                { 
                     name: "Kazmaier's Market",
+                    icon: 'fa-store',
                     description: 'Fresh Market Grocery Store',
                     distance: '2.7 miles',
                     bike:  '18 min',
@@ -124,6 +134,7 @@ const maps =
                 },
                 { 
                     name: "Walt Churchill's Market",
+                    icon: 'fa-store',
                     description: 'Grocery store',
                     distance: '3.2 miles',
                     bike:  '17 min',
@@ -140,6 +151,7 @@ const maps =
             markers: [
                 { 
                     name: "Chili's Grill & Bar",
+                    icon: 'fa-utensils',
                     description: 'Family-friendly chain serving classic Tex-Mex & American fare in a Southwestern-style setting.',
                     distance: '2.0 miles',
                     bike: '9 min',
@@ -151,6 +163,7 @@ const maps =
                 },
                 { 
                     name: '5th Street Pub',
+                    icon: 'fa-utensils',
                     description: "Colorful pub with a separate dining room specializing in Neapolitan pizza & meatball dishes.",
                     distance: '3.2 miles',
                     bike: '16 min',
@@ -162,6 +175,7 @@ const maps =
                 },
                 { 
                     name: "Stella's Restaurant",
+                    icon: 'fa-utensils',
                     description: 'Upscale American destination in a 2-story space decorated with red-oak paneling & glass sculptures.',
                     distance: '3.5 miles',
                     bike: '19 min',
@@ -173,6 +187,7 @@ const maps =
                 },
                 { 
                     name: "Zingo's",
+                    icon: 'fa-utensils',
                     description: 'Cozy spot for Mediterranean fare from pitas to salads & housemade desserts, with vegetarian options.',
                     distance: '3.3 miles',
                     bike: '17 min',
@@ -184,6 +199,7 @@ const maps =
                 },
                 { 
                     name: 'Chipotle',
+                    icon: 'fa-utensils',
                     description: 'Fast-food chain offering Mexican fare, including design-your-own burritos, tacos & bowls.',
                     distance: '0.7 miles',
                     walk: '14 min',
@@ -196,6 +212,7 @@ const maps =
                 },
                 { 
                     name: 'Cocina De Carlos',
+                    icon: 'fa-utensils',
                     description: 'Specialist in familiar Mexican dishes & drinks offering a daily lunch buffet in an informal setup.',
                     distance: '0.6 miles',
                     walk: '12 min',
@@ -208,6 +225,7 @@ const maps =
                 },
                 { 
                     name: 'Chick-fil-A',
+                    icon: 'fa-utensils',
                     description: 'Fast-food chain serving chicken sandwiches, strips & nuggets along with salads & sides.',
                     distance: '1.2 miles',
                     walk: '23 min',
@@ -220,6 +238,7 @@ const maps =
                 },
                 { 
                     name: 'Tropical Smoothie Cafe',
+                    icon: 'fa-utensils',
                     description: 'Casual, health-conscious chain cafe featuring custom smoothies, sandwiches & wraps.',
                     distance: '1.5 miles',
                     walk: '30 min',
@@ -237,6 +256,7 @@ const maps =
             markers: [
                 { 
                     name: 'Three Meadows Pond and Park',
+                    icon: 'fa-fish',
                     description: 'Green space with ponds, fishing & boating, plus a picnic shelter, playground & seasonal ice skating.',
                     distance: '2.2 miles',
                     bike: '13 min',
@@ -248,6 +268,7 @@ const maps =
                 },
                 { 
                     name: 'Woodlands Park',
+                    icon: 'fa-tree',
                     description: "Large park housing a disc-golf course, Fort Imagination (a community-funded playground) & more.",
                     distance: '2.3 miles',
                     bike: '14 min',
@@ -259,6 +280,7 @@ const maps =
                 },
                 { 
                     name: 'Side Cut Metropark',
+                    icon: 'fa-fish',
                     description: 'Riverfront park with picnic areas, historic locks & flat rocks that enable spring walleye fishing.',
                     distance: '5.5 miles',
                     car: '15 min',
@@ -269,6 +291,7 @@ const maps =
                 },
                 { 
                     name: 'Funny Bone Comedy Club',
+                    icon: 'fa-glass-martini',
                     description: 'This cabaret-style club for ages 21 & over features comedy acts a Southern-style dinner menu.',
                     distance: '5.2 miles',
                     car: '12 min',
@@ -279,6 +302,7 @@ const maps =
                 },
                 { 
                     name: 'Axe 419',
+                    icon: 'fa-beer',
                     description: 'Axe throwing is great for all ages, all levels of skill and is a perfect night out for any event.',
                     distance: '2.1 miles',
                     car: '8 min',
@@ -295,6 +319,7 @@ const maps =
             markers: [
                 { 
                     name: 'Total Sports Complex',
+                    icon: 'fa-futbol',
                     description: 'Wide variety of field sports including soccer, baseball, softball, lacrosse and football.',
                     distance: '1.5 miles',
                     bike: '6 min',
@@ -306,6 +331,7 @@ const maps =
                 },
                 { 
                     name: 'Planet Fitness',
+                    icon: 'fa-dumbbell',
                     description: "Gym, Tanning, HydroMassage beds and other amenities.",
                     distance: '2.1 miles',
                     bike: '11 min',
@@ -317,6 +343,7 @@ const maps =
                 },
                 { 
                     name: 'Pure Barre',
+                    icon: 'fa-running',
                     description: 'Pure Barre features group class formats that deliver an effective total body barre workout.',
                     distance: '3.2 miles',
                     bike: '17 min',
@@ -328,6 +355,7 @@ const maps =
                 },
                 { 
                     name: 'TRV Fit',
+                    icon: 'fa-running',
                     description: 'High intensity, challenging group classes and individual classes with personal trainers.',
                     distance: '3.3 miles',
                     bike: '18 min',
@@ -339,6 +367,7 @@ const maps =
                 },
                 { 
                     name: 'Jazzercise Perrysburg',
+                    icon: 'fa-music',
                     description: 'Jazzercise is the original dance party workout. Blending dance with Pilates, yoga, kickboxing and strength training.',
                     distance: '2.2 miles',
                     bike:  '12 min',
@@ -350,6 +379,7 @@ const maps =
                 },
                 { 
                     name: 'Mercy Health - Perrysburg Hospital',
+                    icon: 'fa-h-square',
                     description: 'Hospital',
                     distance: '3.2 miles',
                     car: '10 min',
@@ -365,6 +395,7 @@ const maps =
             markers: [
                 { 
                     name: 'Perrysburg Junior High School',
+                    icon: 'fa-graduation-cap',
                     description: 'High School',
                     distance: '1.6 miles',
                     bike: '12 min',
@@ -376,6 +407,7 @@ const maps =
                 },
                 { 
                     name: 'Frank Elementary School',
+                    icon: 'fa-graduation-cap',
                     description: "Elementary School",
                     distance: '2.3 miles',
                     bike: '14 min',
@@ -387,6 +419,7 @@ const maps =
                 },
                 { 
                     name: 'Toth Elementary School',
+                    icon: 'fa-graduation-cap',
                     description: 'Elementary School',
                     distance: '2.3 miles',
                     bike: '15 min',
@@ -398,6 +431,7 @@ const maps =
                 },
                 { 
                     name: 'Woodland Elementary School',
+                    icon: 'fa-graduation-cap',
                     description: 'Elementary School',
                     distance: '2.2 miles',
                     bike: '13 min',
@@ -409,6 +443,7 @@ const maps =
                 },
                 { 
                     name: 'Perrysburg High School',
+                    icon: 'fa-graduation-cap',
                     description: 'High School',
                     distance: '5.2 miles',
                     bike:  '27 min',

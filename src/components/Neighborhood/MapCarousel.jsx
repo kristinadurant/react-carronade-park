@@ -40,7 +40,7 @@ const MapCarousel = ({ markers }) => {
               <div key={index}>
                 <p>{marker.name}</p>
                 <p>{marker.description}</p>
-                <Distance distance={marker.distance} bike={marker.bike} car={marker.car} />
+                <Distance distance={marker.distance} walk={marker.walk} bike={marker.bike} car={marker.car} />
               </div>
           );
         })}
