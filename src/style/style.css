@@ -139,7 +139,7 @@ header .inner-wide {
   align-items: center;
   height: 50px;
 }
-header ul {
+header .desktop-menu ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -151,7 +151,7 @@ header nav a {
   letter-spacing: 0.1em;
   font-size: 0.8rem;
 }
-header nav li:last-of-type a {
+header .desktop-menu li:last-of-type a {
   padding-right: 0;
 }
 header nav a:hover {
@@ -162,6 +162,37 @@ header nav a:hover {
   ==============================*/
 header .open-menu {
   display: none;
+  width: 44px;
+  height: 44px;
+}
+header .mobile-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fffffff5;
+  z-index: 100;
+}
+header .mobile-menu nav {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .mobile-menu nav a {
+  font-size: 1.25rem;
+}
+header .open-menu i {
+  font-size: 1.25rem;
+}
+header .mobile-menu .close {
+  font-size: 2.5rem;
+  width: 44px;
+  height: 44px;
+  right: 5%;
+  position: absolute;
+  top: 2%;
 }
 /*=============================
     FOOTER
@@ -311,6 +342,7 @@ i.fa-angle-double-right {
 #floor-plans-blocks {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 #floor-plans-blocks .container {
   width: 45%;
@@ -369,6 +401,7 @@ section.bg-grey.carousel {
 .amenities-list {
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .amenities-list div {
@@ -701,6 +734,8 @@ label.required::after {
   }
   .banner-text h1 {
     font-size: 2rem;
+    line-height: 3.5em;
+    height: 3.5em;
   }
   .banner-text a {
     width: 2.5rem;
@@ -757,14 +792,99 @@ label.required::after {
     height: auto;
     min-height: auto;
   }
+  .banner-text a {
+    display: none;
+  }
   .carousel .next {
-    right: calc(50% - 450px);
+    right: 6%;
   }
   .carousel .previous {
-    left: calc(50% - 450px);
+    left: 6%;
   }
   .amenities-list .divider:first-of-type,
   .amenities-list .divider:last-of-type {
     display: none;
+  }
+}
+@media only screen and (max-width: 991px) {
+  header .inner-wide {
+    height: 70px;
+  }
+  header .open-menu {
+    display: block;
+  }
+  header nav.desktop-menu {
+    display: none;
+  }
+  .banner-text h1 {
+    font-size: 1.75rem;
+    height: 3em;
+    line-height: 3em;
+  }
+  #home-page-blocks .title {
+    padding: 3% 0;
+  }
+  #home-page-blocks a {
+    font-size: 0.875rem;
+  }
+  #floor-plans-blocks.inner {
+    width: 90%;
+  }
+  #floor-plans-blocks .container {
+    width: 47%;
+  }
+  .carousel .previous {
+    left: 3%;
+  }
+  .carousel .next {
+    right: 3%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .banner-text h1 {
+    font-size: 1.5rem;
+  }
+  #home-page-blocks .title {
+    padding: 2% 0;
+  }
+  #home-page-blocks a {
+    font-size: 0.75rem;
+  }
+  footer p:first-of-type {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  footer p:nth-of-type(n + 2) {
+    font-size: 0.75rem;
+  }
+  #floor-plans-blocks.inner {
+    width: 70%;
+  }
+  #floor-plans-blocks .container {
+    width: 100%;
+    margin-bottom: 8vw;
+  }
+  #floor-plans-blocks .container div div {
+    min-width: 80px;
+    width: 35%;
+  }
+  section.bg-grey.carousel {
+    margin-bottom: 10%;
+  }
+  .carousel .next,
+  .carousel .previous {
+    font-size: 2em;
+  }
+  .amenities-list div {
+    width: 100%;
+    margin-bottom: 3vw;
+  }
+  .amenities-list .divider {
+    display: none;
+  }
+  .gallery div a,
+  .gallery a:nth-of-type(n + 8),
+  .gallery a:nth-of-type(n + 20) {
+    width: calc(50% - 0.4rem);
   }
 }

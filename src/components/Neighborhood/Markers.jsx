@@ -23,7 +23,7 @@ const Markers = () => {
             >    
                 <button className="marker" onClick={ () => setSelected(marker)}>
                     <i className="fas fa-shopping-bag"></i>
-                    <span className='hide'>close popup</span>
+                    <span className='hide'>shopping</span>
                 </button>
                 <p>{marker.name}</p>
             </Marker>
@@ -31,7 +31,10 @@ const Markers = () => {
 
         {selected && 
             <Popup coordinates={selected.coordinates}>
-                <button className="close" onClick={() => setSelected(null)}>&times;</button>
+                <button className="close" onClick={() => setSelected(null)}>
+                    &times;
+                    <span className='hide'>close popup</span>
+                </button>
                 <p className='title'>
                     <a href={selected.google_url} target="_blank" rel="noreferrer">
                         {selected.name}
