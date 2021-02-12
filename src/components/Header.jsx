@@ -8,7 +8,6 @@ const Header = () => {
         <header>
             <div className="inner-wide">
                 <Link to='/' className="logo">
-                    <i className="fas fa-leaf"></i>
                     <span>Carronade Park</span>
                 </Link>
             <nav className="desktop-menu">

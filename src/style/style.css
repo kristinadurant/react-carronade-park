@@ -111,16 +111,6 @@ header {
   background-color: #ffffffc7;
   z-index: 1001;
 }
-header .fa-leaf {
-  color: #67ddab;
-  transform: rotate(-90deg);
-  font-size: 2rem;
-  margin-right: -0.5em;
-}
-.logo {
-  display: flex;
-  align-items: center;
-}
 .logo span {
   color: #2c333c;
   font-size: 1.5rem;
@@ -869,7 +859,7 @@ label.required::after {
     width: 35%;
   }
   section.bg-grey.carousel {
-    margin-bottom: 10%;
+    padding-bottom: 10%;
   }
   .carousel .next,
   .carousel .previous {
@@ -882,9 +872,46 @@ label.required::after {
   .amenities-list .divider {
     display: none;
   }
-  .gallery div a,
-  .gallery a:nth-of-type(n + 8),
-  .gallery a:nth-of-type(n + 20) {
+  #schedule-tour.inner {
+    width: 90%;
+  }
+  #schedule-tour h1 {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (max-width: 599px) {
+  .inner {
+    width: 90%;
+  }
+  #home-page-blocks > div {
+    width: 32.5%;
+    height: 32vw;
+    margin-right: 1%;
+  }
+  #home-page-blocks .title {
+    bottom: 4%;
+    width: 92%;
+    left: 4%;
+    padding: 0;
+  }
+  #home-page-blocks a,
+  .button {
+    font-size: 0.675rem;
+  }
+  #floor-plans-page h2 {
+    font-size: 1.25rem;
+  }
+  .gallery div a {
     width: calc(50% - 0.4rem);
+  }
+  #tour-form form {
+    background-color: transparent;
+    padding: 5% 0;
+  }
+  form label {
+    font-size: 0.875rem;
+  }
+  .survey {
+    border-color: #eee;
   }
 }
