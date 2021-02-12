@@ -2,7 +2,7 @@ import React from 'react'
 import ReactMapboxGl, { Marker } from 'react-mapbox-gl';
 import Markers from './Markers';
 
-const Map = () => {
+const Map = ({ category }) => {
 
     const Mapbox = ReactMapboxGl({
         accessToken: process.env.REACT_APP_MAPBOX_TOKEN,
@@ -22,7 +22,7 @@ const Map = () => {
                 <i className="fas fa-home"></i>
                 <p>You are here</p>          
             </Marker>
-            <Markers />
+            <Markers category={category}/>
         </Mapbox>
     )
 }

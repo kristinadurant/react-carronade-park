@@ -32,7 +32,7 @@ const Neighborhood = () => {
                     ))}
                 </ul>
                 <div className="map-container">
-                    <Map />
+                    <Map category={tab} />
                 </div>
             </section>
             <section style={{maxWidth: '100%', margin: 'auto'}}>

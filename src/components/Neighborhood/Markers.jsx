@@ -3,7 +3,7 @@ import { Popup, Marker } from 'react-mapbox-gl';
 import maps from '../../data/Neighborhood';
 import Distance from './Distance';
 
-const Markers = () => {
+const Markers = ({ category }) => {
     const [selected, setSelected] = useState(null);
 
     useEffect(() => {
@@ -16,7 +16,7 @@ const Markers = () => {
     
     return (
         <>
-        { maps.Shopping.markers.map( marker  => (
+        { maps[category].markers.map( marker  => (
             <Marker 
                 key={marker.name}
                 coordinates={marker.coordinates}
