@@ -29,7 +29,7 @@ const Home = () => {
                         style={{backgroundImage: 'url(https://res.cloudinary.com/carronadepark/image/upload/v1611285585/Gallery/IMG_1716_Large_s75upg.jpg)'}}
                         className='background-image'
                     >                
-
+                        <span className="hide">Carronade Park Floor Plans</span>
                     </Link>
                     <div className="title">                       
                         <Link to='/carronade-park-floor-plans'>
@@ -43,7 +43,7 @@ const Home = () => {
                         style={{backgroundImage: 'url(https://res.cloudinary.com/carronadepark/image/upload/v1611285585/Gallery/IMG_1653_Large_psjvht.jpg)'}}
                         className='background-image'
                     >
-
+                        <span className="hide">Carronade Park Amenities</span>
                     </Link>
                     <div className="title">  
                         <Link to='/carronade-park-amenities'>
@@ -57,6 +57,7 @@ const Home = () => {
                         style={{backgroundImage: 'url(https://res.cloudinary.com/carronadepark/image/upload/v1611351435/Neighborhood/Poster_2_Large_1_maemqb.jpg)'}}
                         className='background-image'
                         >
+                        <span className="hide">Carronade Park Neighborhood</span>
                     </Link>
                     <div className="title">  
                         <Link to='/carronade-park-neighborhood'>

@@ -7,9 +7,9 @@ function sendEmail(e) {
         e.target, 
         process.env.REACT_APP_EMAILJS_USER_ID
     ).then((result) => {
-        console.log(result.text);
+        return result.text;
     }, (error) => {
-        console.log(error.text);
+        return error.text;
     });
 }
 

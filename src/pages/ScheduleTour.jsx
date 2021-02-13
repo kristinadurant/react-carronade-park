@@ -15,7 +15,7 @@ const ScheduleTour = () => {
             form.reset();
             setSuccess(true);
         } catch(err) {
-            console.log(err.message);
+            return err.message;
         }
         setLoading(false);
     }

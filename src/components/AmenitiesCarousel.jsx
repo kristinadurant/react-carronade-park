@@ -58,7 +58,7 @@ const AmenitiesCarousel = () => {
         {amenities.map((item, index) => {
           return (
               <div key={index}>
-                  <img src={item.image} alt={item.description}/>
+                  <img src={item.image} alt={item?.descripiton}/>
               </div>
           );
         })}

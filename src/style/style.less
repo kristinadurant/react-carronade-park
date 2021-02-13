@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "revicons";
+  font-display: swap;
+}
 @cp-grey: #242f38;
 @cp-accent: #10c778;
 @cp-white: white;
@@ -14,11 +18,13 @@
   padding-bottom: 5%;
 }
 * {
+  margin: 0;
+  padding: 0;
+}
+div * {
   transition: color 500ms, background-color 500ms;
   color: @color;
   text-decoration: none;
-  margin: 0;
-  padding: 0;
   text-align: center;
   box-sizing: border-box;
   font-family: "Source Sans Pro", sans-serif;
@@ -237,36 +243,29 @@ footer .social a:hover {
     BANNER
   ==============================*/
 .banner {
-  height: 100vh;
-  // position: relative;
-  min-height: 600px;
   margin-top: 0;
   margin-bottom: 0;
   display: flex;
   flex-direction: column;
 }
 .banner-carousel-container {
-  // height: 100%;
   overflow: hidden;
+  height: 85vh;
+  min-height: 550px;
 }
 .banner img {
   width: 100%;
   display: block;
 }
 .banner-text {
-  // padding-top: calc(@header - 3rem);
-  // position: absolute;
-  // width: 100%;
-  // bottom: 0;
-  min-height: 15%;
+  height: 15vh;
+  min-height: 80px;
   position: relative;
 }
 .banner-text h1 {
   background-color: @cp-grey;
   font-size: 2.25rem;
   line-height: 1;
-  // line-height: 4em;
-  // height: 4em;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -687,6 +686,9 @@ button.marker:hover {
   line-height: 1.1;
   font-size: 0.875rem;
 }
+.map .mapboxgl-ctrl-attrib-inner {
+  display: none;
+}
 /*=============================
     SCHEDULE A TOUR
   ==============================*/
@@ -845,7 +847,7 @@ label.required::after {
   section.intro {
     margin-top: 8vw;
   }
-  .banner {
+  .banner-carousel-container {
     height: auto;
     min-height: auto;
   }

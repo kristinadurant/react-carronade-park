@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "revicons";
+  font-display: swap;
+}
 .bg-image {
   background-size: cover;
   background-repeat: no-repeat;
@@ -9,11 +13,13 @@
   padding-bottom: 5%;
 }
 * {
+  margin: 0;
+  padding: 0;
+}
+div * {
   transition: color 500ms, background-color 500ms;
   color: #111;
   text-decoration: none;
-  margin: 0;
-  padding: 0;
   text-align: center;
   box-sizing: border-box;
   font-family: "Source Sans Pro", sans-serif;
@@ -230,8 +236,6 @@ footer .social a:hover {
     BANNER
   ==============================*/
 .banner {
-  height: 100vh;
-  min-height: 600px;
   margin-top: 0;
   margin-bottom: 0;
   display: flex;
@@ -239,13 +243,16 @@ footer .social a:hover {
 }
 .banner-carousel-container {
   overflow: hidden;
+  height: 85vh;
+  min-height: 550px;
 }
 .banner img {
   width: 100%;
   display: block;
 }
 .banner-text {
-  min-height: 15%;
+  height: 15vh;
+  min-height: 80px;
   position: relative;
 }
 .banner-text h1 {
@@ -593,6 +600,7 @@ div.SRLPrevButton::before {
   border: 1px solid #eee;
   width: 85%;
   height: 100%;
+  margin: auto;
 }
 .map-carousel li.react-multi-carousel-item p:first-of-type {
   font-weight: bold;
@@ -668,6 +676,9 @@ button.marker:hover {
 .mapboxgl-popup-content * {
   line-height: 1.1;
   font-size: 0.875rem;
+}
+.map .mapboxgl-ctrl-attrib-inner {
+  display: none;
 }
 /*=============================
     SCHEDULE A TOUR
@@ -823,7 +834,7 @@ label.required::after {
   section.intro {
     margin-top: 8vw;
   }
-  .banner {
+  .banner-carousel-container {
     height: auto;
     min-height: auto;
   }
