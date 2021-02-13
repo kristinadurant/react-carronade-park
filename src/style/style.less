@@ -7,6 +7,12 @@
 @cp-white: white;
 @color: #111;
 @thin-border: 1px solid #eee;
+.all-caps {
+  font-family: "Source Sans Pro", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
 .bg-image {
   background-size: cover;
   background-repeat: no-repeat;
@@ -27,7 +33,7 @@ div * {
   text-decoration: none;
   text-align: center;
   box-sizing: border-box;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.5em;
   font-size: 1rem;
 }
@@ -99,12 +105,11 @@ main {
 h1 {
   text-align: center;
   font-size: 2rem;
-  text-transform: uppercase;
+  .all-caps;
 }
 #floor-plans-page h2 {
   font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  .all-caps;
   margin-bottom: 2rem;
 }
 p {
@@ -112,7 +117,7 @@ p {
 }
 section.intro p {
   font-size: 1.1rem;
-  color: #999;
+  color: #777;
 }
 
 /*=============================
@@ -133,10 +138,6 @@ header {
   display: block;
   z-index: 10;
 }
-
-.logo span:first-child {
-  margin-left: -0.3rem;
-}
 header .inner-wide {
   display: flex;
   justify-content: space-between;
@@ -151,8 +152,7 @@ header .desktop-menu ul {
 header nav a {
   padding: 1em;
   color: #5c6b7f;
-  font-weight: bold;
-  letter-spacing: 0.1em;
+  .all-caps;
   font-size: 0.8rem;
 }
 header .desktop-menu li:last-of-type a {
@@ -335,10 +335,8 @@ i.fa-angle-double-right {
   margin-right: 0.2em;
 }
 #home-page-blocks a {
-  font-weight: bold;
   font-size: 1.25rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  .all-caps;
 }
 #home-page-blocks a:hover {
   color: @cp-accent;
@@ -381,13 +379,11 @@ i.fa-angle-double-right {
 }
 .button {
   border: 1px solid @cp-accent;
-  font-weight: bold;
-  letter-spacing: 0.2em;
   font-size: 0.875rem;
   padding: 0.7em 2em;
   color: #fff;
   background: @cp-accent;
-  text-transform: uppercase;
+  .all-caps;
   text-align: center !important;
 }
 .button:hover {
@@ -417,10 +413,8 @@ section.bg-grey.carousel {
 }
 .amenities-list .title {
   margin-bottom: 0.5em;
-  font-weight: bold;
   color: @cp-accent;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  .all-caps;
 }
 .amenities-list .title + ul {
   height: 100%;
@@ -586,8 +580,7 @@ div.SRLPrevButton::before {
   padding: 0.5em;
 }
 #neighborhood-page .tabs button span {
-  text-transform: uppercase;
-  font-weight: bold;
+  .all-caps;
 }
 #neighborhood-page .tabs button i {
   color: transparent;
@@ -613,8 +606,7 @@ div.SRLPrevButton::before {
   margin: auto;
 }
 .map-carousel li.react-multi-carousel-item p:first-of-type {
-  font-weight: bold;
-  text-transform: uppercase;
+  .all-caps;
 }
 .distance span {
   margin: 2em 0.5em 0;
@@ -674,8 +666,7 @@ button.marker:hover {
   color: @cp-accent;
 }
 .mapboxgl-popup-content .title a {
-  font-weight: bold;
-  text-transform: uppercase;
+  .all-caps;
   font-size: 1rem;
   text-decoration: underline;
 }

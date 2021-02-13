@@ -2,6 +2,12 @@
   font-family: "revicons";
   font-display: swap;
 }
+.all-caps {
+  font-family: "Source Sans Pro", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
 .bg-image {
   background-size: cover;
   background-repeat: no-repeat;
@@ -22,7 +28,7 @@ div * {
   text-decoration: none;
   text-align: center;
   box-sizing: border-box;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.5em;
   font-size: 1rem;
 }
@@ -94,12 +100,17 @@ main {
 h1 {
   text-align: center;
   font-size: 2rem;
+  font-family: "Source Sans Pro", sans-serif;
   text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1em;
 }
 #floor-plans-page h2 {
   font-size: 2rem;
+  font-family: "Source Sans Pro", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
   margin-bottom: 2rem;
 }
 p {
@@ -127,9 +138,6 @@ header {
   display: block;
   z-index: 10;
 }
-.logo span:first-child {
-  margin-left: -0.3rem;
-}
 header .inner-wide {
   display: flex;
   justify-content: space-between;
@@ -144,6 +152,8 @@ header .desktop-menu ul {
 header nav a {
   padding: 1em;
   color: #5c6b7f;
+  font-family: "Source Sans Pro", sans-serif;
+  text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.1em;
   font-size: 0.8rem;
@@ -329,10 +339,11 @@ i.fa-angle-double-right {
   margin-right: 0.2em;
 }
 #home-page-blocks a {
-  font-weight: bold;
   font-size: 1.25rem;
-  letter-spacing: 0.1em;
+  font-family: "Source Sans Pro", sans-serif;
   text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1em;
 }
 #home-page-blocks a:hover {
   color: #10c778;
@@ -374,13 +385,14 @@ i.fa-angle-double-right {
 }
 .button {
   border: 1px solid #10c778;
-  font-weight: bold;
-  letter-spacing: 0.2em;
   font-size: 0.875rem;
   padding: 0.7em 2em;
   color: #fff;
   background: #10c778;
+  font-family: "Source Sans Pro", sans-serif;
   text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1em;
   text-align: center !important;
 }
 .button:hover {
@@ -410,9 +422,10 @@ section.bg-grey.carousel {
 }
 .amenities-list .title {
   margin-bottom: 0.5em;
-  font-weight: bold;
   color: #10c778;
+  font-family: "Source Sans Pro", sans-serif;
   text-transform: uppercase;
+  font-weight: bold;
   letter-spacing: 0.1em;
 }
 .amenities-list .title + ul {
@@ -577,8 +590,10 @@ div.SRLPrevButton::before {
   padding: 0.5em;
 }
 #neighborhood-page .tabs button span {
+  font-family: "Source Sans Pro", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
+  letter-spacing: 0.1em;
 }
 #neighborhood-page .tabs button i {
   color: transparent;
@@ -604,8 +619,10 @@ div.SRLPrevButton::before {
   margin: auto;
 }
 .map-carousel li.react-multi-carousel-item p:first-of-type {
-  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
   text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1em;
 }
 .distance span {
   margin: 2em 0.5em 0;
@@ -665,8 +682,10 @@ button.marker:hover {
   color: #10c778;
 }
 .mapboxgl-popup-content .title a {
-  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
   text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1em;
   font-size: 1rem;
   text-decoration: underline;
 }
