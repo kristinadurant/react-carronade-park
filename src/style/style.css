@@ -406,8 +406,7 @@ section.bg-grey.carousel {
   justify-content: space-between;
 }
 .amenities-list div {
-  width: 30%;
-  padding: 2% 0;
+  width: 31%;
 }
 .amenities-list .title {
   margin-bottom: 0.5em;
@@ -419,7 +418,9 @@ section.bg-grey.carousel {
 .amenities-list .title + ul {
   height: 100%;
   border: 1px solid #eee;
-  padding: 3%;
+  padding: 5% 8%;
+  margin: 0 auto 5%;
+  max-width: 500px;
 }
 .amenities-list .title + ul li {
   text-align: left;
@@ -794,6 +795,7 @@ label.required::after {
   }
   section.intro p {
     font-size: 1rem;
+    line-height: 1.8em;
   }
   #home-page-blocks a {
     font-size: 1rem;
@@ -918,6 +920,9 @@ label.required::after {
   .amenities-list div {
     width: 100%;
     margin-bottom: 3vw;
+  }
+  .amenities-list .title + ul {
+    height: auto;
   }
   #schedule-tour.inner {
     width: 90%;
