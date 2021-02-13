@@ -19,12 +19,11 @@ const Amenities = () => {
                 <AmenitiesCarousel />
             </section>
             <section className="amenities-list inner-wide">
-                <span className="divider"></span>
                 {ulTitle.map((item, index) => {
                     return (      
                         <>
                         <div key={index}>
-                            <p className="title">{item}</p>
+                            <h2 className="title">{item}</h2>
                             <ul>
                                 {amenitiesList[item].map((item, index) => {
                                 return (
@@ -34,7 +33,6 @@ const Amenities = () => {
                                 )})}
                             </ul>
                         </div>
-                        <span className="divider"></span>
                         </>
                     )})}
             </section>

@@ -4,6 +4,23 @@ import images from '../data/Gallery';
 import { SRLWrapper } from "simple-react-lightbox";
 
 const Gallery = () => {
+    const options = {
+        settings: {
+            overlayColor: '#030304eb',
+            disablePanzoom: true
+        },
+        caption: {
+            captionTextTransform: 'capitalize',
+
+        },
+        buttons: {
+            showThumbnailsButton: false,
+            backgroundColor: 'transparent'
+        },
+        thumbnails: {
+            thumbnailsSize: ['10%', '6vw']
+        }	
+    }
 
     return (
         <main id="gallery-page">
@@ -12,11 +29,11 @@ const Gallery = () => {
                 <p>Modern Open Floor Plan, Granite Countertops, Garage Included, Full Size Washer and Dryer Included!</p>
             </section>
             <section className="gallery">
-                <SRLWrapper>
+                <SRLWrapper options={options}>
                     {images.map(( image ) => {
                         return (
                             <a key={image.id} href={image.url}>
-                                <img src={image.url} alt='some descriptive text' />
+                                <img src={image.url} alt={image.description} />
                             </a>
                         )}
                     )}
