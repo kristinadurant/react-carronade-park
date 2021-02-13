@@ -548,10 +548,6 @@ div.SRLPrevButton::before {
   font-size: 3rem;
   color: white;
 }
-div.SRLNextButton:hover,
-div.SRLPrevButton:hover {
-  color: #10c778 !important;
-}
 .css-181pq6b div svg,
 .css-tuif7e div svg {
   display: none !important;
@@ -592,11 +588,11 @@ div.SRLPrevButton:hover {
 .map-carousel .react-multi-carousel-track {
   margin-bottom: 50px;
 }
-.map-carousel li.react-multi-carousel-item {
-  border-right: 2px solid #10c778;
-}
 .map-carousel li.react-multi-carousel-item div {
-  padding: 0 3%;
+  padding: 3%;
+  border: 1px solid #eee;
+  width: 85%;
+  height: 100%;
 }
 .map-carousel li.react-multi-carousel-item p:first-of-type {
   font-weight: bold;
