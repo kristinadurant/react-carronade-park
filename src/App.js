@@ -2,7 +2,7 @@ import './style/style.css';
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';
-import { Header, Footer } from './components';
+import { Header, HeaderMobile, Footer } from './components';
 import { Home, FloorPlans, Amenities, Gallery, Neighborhood, ScheduleTour } from './pages';
 
 const App = () => {
@@ -10,6 +10,7 @@ const App = () => {
     <BrowserRouter >
       <ScrollToTop />
       <Header />
+      <HeaderMobile />
       <Switch>
         <Route exact path='/' component={Home} />       
         <Route exact path='/carronade-park-floor-plans' component={FloorPlans} />

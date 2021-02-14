@@ -1,6 +1,7 @@
 const maps = 
     {
         Shopping: {
+            icon: 'fa-shopping-bag',
             url: 'https://www.google.com/maps/d/u/3/embed?mid=1NAFDSzbhsuHVlLAzrg11jUB1R7kwWfWs',
             markers: [
                 { 
@@ -66,6 +67,7 @@ const maps =
             ]
         },
         Groceries: {
+            icon: 'fa-store',
             url: 'https://www.google.com/maps/d/embed?mid=1-Q3xkJ7sBxsxTRAgJnHprjMG_IX7wtp9&hl',
             markers: [
                 { 
@@ -147,6 +149,7 @@ const maps =
             ]
         },
         Dining: {
+            icon: 'fa-utensils',
             url: 'https://www.google.com/maps/d/u/3/embed?mid=1JekBgppuo-Npnjmu_r91HxAgbtnLqX13',
             markers: [
                 { 
@@ -252,6 +255,7 @@ const maps =
             ]
         },
         Entertainment: {
+            icon: 'fa-beer',
             url: 'https://www.google.com/maps/d/embed?mid=1feP7F1CaZdDAcI9iqPjgYZ9P6fADYoIR&hl',
             markers: [
                 { 
@@ -314,6 +318,7 @@ const maps =
             ]
         },
         Wellness: {   
+            icon: 'fa-dumbbell',
             name: 'Wellness',
             url: 'https://www.google.com/maps/d/embed?mid=1f9QRTzDOBcA4BExN8zXT0iDAH0JbnpUD&hl',
             markers: [
@@ -391,6 +396,7 @@ const maps =
             ]
         },        
         Education: {
+            icon: 'fa-graduation-cap',
             url: 'https://www.google.com/maps/d/embed?mid=1Wpi-R7SX-VSyYj3ReU96prduYoyd-_6e&hl=en',
             markers: [
                 { 

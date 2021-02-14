@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import HeaderMobile from './HeaderMobile';
 import { Spring } from 'react-spring/renderprops';
 
 const Header = () => {
@@ -22,7 +21,7 @@ const Header = () => {
     return (
         <Spring from={{marginTop: -50}} to={{marginTop: 0}} reset={true} reverse={reverse}>
             {props =>
-        <header id="navbar" style={props}>
+        <header style={props} className='mobile-hide'>
             <div className="inner-wide">
                 <Link to='/' className="logo">
                     <span>Carronade Park</span>
@@ -45,7 +44,6 @@ const Header = () => {
                         </li>
                     </ul>
                 </nav>
-                <HeaderMobile />
             </div>
         </header>
         }

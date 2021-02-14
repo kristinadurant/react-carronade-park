@@ -8,7 +8,7 @@ const FloorPlans = () => {
         settings: {
             disableKeyboardControls: true,
             disableWheelControls: true,
-            overlayColor: '#030304eb'
+            overlayColor: '#030304fc'
         },
         thumbnails: {
             showThumbnails: false

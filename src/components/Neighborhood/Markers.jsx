@@ -43,7 +43,7 @@ const Markers = () => {
         ))}
 
         {selected && 
-            <Popup coordinates={selected.coordinates}>
+            <Popup coordinates={selected.coordinates} className='mobile-hide'>
                 <button className="close" onClick={() => setSelected(null)}>
                     &times;
                     <span className='hide'>close popup</span>

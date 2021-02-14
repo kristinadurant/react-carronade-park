@@ -13,7 +13,7 @@ const Map = () => {
         <div className="map-container">
             <Mapbox 
                 style="mapbox://styles/kristina990/ckl06ynxz09d017n3yb0my541"
-                containerStyle={{ height: '500px', width: '100%' }}
+                containerStyle={{ height: '40vw', width: '100%' }}
                 center={[-83.60881, 41.54275]}
                 zoom={[12]}
             >

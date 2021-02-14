@@ -6,7 +6,7 @@ import { SRLWrapper } from "simple-react-lightbox";
 const Gallery = () => {
     const options = {
         settings: {
-            overlayColor: '#030304eb',
+            overlayColor: '#030304fc',
             disablePanzoom: true
         },
         caption: {

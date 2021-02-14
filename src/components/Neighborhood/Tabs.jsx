@@ -7,18 +7,23 @@ const Tabs = () => {
     const categories = Object.keys(maps);
 
     return (
+        <>
+        <h2 className='mobile-show'>{tab}</h2>
         <ul className="tabs">
-        {categories.map((item) => (
-            <li key={item}>
-                <button 
-                    className={item===tab? 'active tab': 'tab'}
-                    onClick={()=> setTab(item)}
-                >
-                    <span>{item}</span>
-                </button>
-            </li>
-        ))}
-    </ul>              
+            {categories.map((item) => (
+                <li key={item}>
+                    <button 
+                        className={item===tab? 'active tab': 'tab'}
+                        onClick={()=> setTab(item)}
+                    >
+                        <i className={`fas ${maps[item].icon}`}></i>
+                        <span>{item}</span>
+                    </button>
+                </li>
+            ))}
+        </ul>
+            
+        </>         
     )
 }
 

@@ -1,7 +1,3 @@
-@font-face {
-  font-family: "revicons";
-  font-display: swap;
-}
 @cp-grey: #242f38;
 @cp-accent: #10c778;
 @cp-white: white;
@@ -124,6 +120,9 @@ section.intro p {
 /*=============================
     HEADER
   ==============================*/
+.mobile-show {
+  display: none;
+}
 header {
   position: fixed;
   width: 100%;
@@ -300,7 +299,7 @@ footer .social a:hover {
 #home-page .intro a {
   margin-top: 1rem;
 }
-#home-page-blocks > div {
+#home-page-blocks div.background-image {
   width: 32%;
   height: 30vw;
   max-height: 480px;
@@ -308,22 +307,13 @@ footer .social a:hover {
   display: inline-block;
   overflow: hidden;
   position: relative;
-  background-color: black;
+  .bg-image;
 }
 #home-page-blocks > div:last-child {
   margin-right: 0;
 }
-#home-page-blocks .background-image {
-  .bg-image;
-  position: relative;
-  height: 100%;
-  width: 100%;
-  transition: 1s;
-}
-#home-page-blocks .background-image:hover {
-  opacity: 0.5;
-}
 #home-page-blocks .title {
+  border: 1px solid #ffffffeb;
   background-color: #ffffffeb;
   position: absolute;
   bottom: 5%;
@@ -395,7 +385,7 @@ i.fa-angle-double-right {
     AMENITIES
 ==============================*/
 section.bg-grey.carousel {
-  margin-bottom: 5vw;
+  margin-bottom: 10vw;
   position: relative;
 }
 .bg-grey.carousel .react-multi-carousel-list {
@@ -585,6 +575,10 @@ div.SRLPrevButton::before {
 }
 #neighborhood-page .tabs button {
   padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 #neighborhood-page .tabs button span {
   .all-caps;
@@ -596,12 +590,6 @@ div.SRLPrevButton::before {
 #neighborhood-page .tabs button:hover *,
 #neighborhood-page .tabs button.active * {
   color: @cp-accent;
-}
-.map-container {
-  overflow: hidden;
-}
-.map-container > * {
-  margin-top: -60px;
 }
 .map-carousel .react-multi-carousel-track {
   margin-bottom: 50px;
@@ -625,6 +613,10 @@ div.SRLPrevButton::before {
 .distance i {
   color: @cp-accent;
   margin-right: 0.3em;
+}
+.mapboxgl-map {
+  max-height: 500px;
+  min-height: 200px;
 }
 /*=============================
     MAP
@@ -866,12 +858,29 @@ label.required::after {
   .carousel .previous {
     left: 6%;
   }
+  #neighborhood-page .tabs button span {
+    font-size: 0.875rem;
+  }
 }
 @media only screen and (max-width: 991px) {
   header .open-menu {
     display: block;
   }
-  header nav.desktop-menu {
+  #neighborhood-page .tabs li {
+    width: auto;
+  }
+  .mobile-show {
+    display: block;
+  }
+  header.mobile-show {
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+  }
+  div#root {
+    padding-top: 50px;
+  }
+  .mobile-hide {
     display: none;
   }
   .banner-text h1 {
@@ -937,6 +946,19 @@ label.required::after {
   }
   .amenities-list .title + ul {
     height: auto;
+  }
+  #neighborhood-page .tabs button i {
+    color: @cp-grey;
+  }
+  #neighborhood-page .map h2 {
+    .all-caps;
+    color: @cp-accent;
+    margin-bottom: 1em;
+  }
+  #neighborhood-page .tabs button span {
+    width: 1px;
+    height: 1px;
+    opacity: 0;
   }
   #schedule-tour.inner {
     width: 90%;
