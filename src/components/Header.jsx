@@ -4,14 +4,14 @@ import HeaderMobile from './HeaderMobile';
 import { useSpring, animated } from 'react-spring';
 
 const Header = () => {
-    const [props, set] = useSpring(() => ({marginTop: 0})); 
+    const [props, set] = useSpring(() => ({marginTop: -50})); 
     
-// console.log(props);
+console.log(props);
 useEffect(() => {
 
-    window.addEventListener('keydown ', set({marginTop: -50}));
+    window.addEventListener('keydown ', set({marginTop: 0}));
     console.log('down');
-    return () => window.removeEventListener('keydown');
+    return () => window.removeEventListener('keydown', set({marginTop: 0}));
 }, []);
 
 

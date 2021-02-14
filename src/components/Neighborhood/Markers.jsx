@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Popup, Marker } from 'react-mapbox-gl';
 import maps from '../../data/Neighborhood';
-import Distance from './Distance';
+import { Distance } from '../Neighborhood';
 import { TabContext } from '../../context/TabContext';
+import { Spring } from 'react-spring/renderprops'
 
 const Markers = () => {
     const { tab } = useContext(TabContext);
@@ -15,20 +16,30 @@ const Markers = () => {
         window.addEventListener('keydown', listener);
         return () => window.removeEventListener('keydown', listener);
     }, []);
+
+    useEffect(() => setSelected(null), [tab]); 
+    //removing selected marker on tab change
+
     
-    return (
+    return tab && (
         <>
-        { maps[tab]?.markers.map( marker  => (
+        { maps[tab].markers.map( marker  => (           
             <Marker 
                 key={marker.name}
                 coordinates={marker.coordinates}
-            >    
-                <button className="marker" onClick={ () => setSelected(marker)}>
+            >    <Spring from={{ marginBottom: 20}} to={{marginBottom: 0}}>
+                {props =>
+                <button style={props} className="marker" onClick={ () => setSelected(marker)}>
                     <i className={`fas ${marker.icon}`}></i>
                     <span className='hide'>shopping</span>
                 </button>
-                <p>{marker.name}</p>
-            </Marker>
+                }
+                </Spring>
+                <Spring from={{ opacity: 0}} to={{opacity: 1}} delay={1000} >
+                    {props => <p style={props}>{marker.name}</p>}
+                </Spring>
+                
+            </Marker>       
         ))}
 
         {selected && 
