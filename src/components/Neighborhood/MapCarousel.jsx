@@ -5,6 +5,7 @@ import 'react-multi-carousel/lib/styles.css';
 import { Distance } from '../Neighborhood';
 import maps from '../../data/Neighborhood';
 
+
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },

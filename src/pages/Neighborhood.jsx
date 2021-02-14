@@ -2,10 +2,12 @@ import React from 'react';
 import Banner from '../components/Banner';
 import AmenitiesCarousel from '../components/AmenitiesCarousel';
 import { Tabs, Map, MapCarousel } from '../components/Neighborhood';
+import { TabContextProvider } from '../context/TabContext';
 
 const Neighborhood = () => {
 
     return (
+        <TabContextProvider>
         <main id="neighborhood-page">
             
             <Banner text={'explore your neighborhood'} image={'https://res.cloudinary.com/carronadepark/image/upload/v1611351435/Neighborhood/Poster_2_Large_1_maemqb.jpg'}/>
@@ -26,6 +28,7 @@ const Neighborhood = () => {
             <MapCarousel />
 
         </main>
+        </TabContextProvider>
     )
 }
 

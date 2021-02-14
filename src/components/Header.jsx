@@ -1,22 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import HeaderMobile from './HeaderMobile';
-import { useSpring, animated } from 'react-spring';
+import { Spring } from 'react-spring/renderprops';
 
 const Header = () => {
-    const [props, set] = useSpring(() => ({marginTop: -50})); 
-    
-console.log(props);
-useEffect(() => {
+    const [reverse, setReverse] = useState(false);
+    var prevScrollpos = window.pageYOffset;
 
-    window.addEventListener('keydown ', set({marginTop: 0}));
-    console.log('down');
-    return () => window.removeEventListener('keydown', set({marginTop: 0}));
-}, []);
-
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+          //scroll up
+        setReverse(false);
+      } else {
+          //scroll down
+        setReverse(true);
+      }
+      prevScrollpos = currentScrollPos;
+    }
 
     return (
-        <animated.header style={props}>
+        <Spring from={{marginTop: -50}} to={{marginTop: 0}} reset={true} reverse={reverse}>
+            {props =>
+        <header id="navbar" style={props}>
             <div className="inner-wide">
                 <Link to='/' className="logo">
                     <span>Carronade Park</span>
@@ -41,7 +47,9 @@ useEffect(() => {
                 </nav>
                 <HeaderMobile />
             </div>
-        </animated.header>
+        </header>
+        }
+        </Spring>
     )
 }
 
