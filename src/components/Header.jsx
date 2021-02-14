@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import HeaderMobile from './HeaderMobile';
+import { useSpring, animated } from 'react-spring';
 
 const Header = () => {
+    const [props, set] = useSpring(() => ({marginTop: 0})); 
     
+// console.log(props);
+useEffect(() => {
+
+    window.addEventListener('keydown ', set({marginTop: -50}));
+    console.log('down');
+    return () => window.removeEventListener('keydown');
+}, []);
+
+
     return (
-        <header>
+        <animated.header style={props}>
             <div className="inner-wide">
                 <Link to='/' className="logo">
                     <span>Carronade Park</span>
@@ -30,7 +41,7 @@ const Header = () => {
                 </nav>
                 <HeaderMobile />
             </div>
-        </header>
+        </animated.header>
     )
 }
 

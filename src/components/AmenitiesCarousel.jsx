@@ -39,30 +39,32 @@ const CustomArrows = ({ next, previous, ...rest }) => {
 const AmenitiesCarousel = () => {
 
     return (
-      <Carousel
-        keyBoardControl
-        swipeable={true}
-        showDots
-        renderDotsOutside
-        infinite
-        autoPlay
-        autoPlaySpeed={5000}
-        customTransition="all 1s"
-        transitionDuration={1000}
-        responsive={responsive}
-        renderButtonGroupOutside={true}
-        customButtonGroup={<CustomArrows />}
-        arrows={false}
-        className="inner"
-      >
-        {amenities.map((item, index) => {
-          return (
-              <div key={index}>
-                  <img src={item.image} alt={item?.descripiton}/>
-              </div>
-          );
-        })}
-      </Carousel>
+      <section className="carousel bg-grey">
+        <Carousel
+          keyBoardControl
+          swipeable={true}
+          showDots
+          renderDotsOutside
+          infinite
+          autoPlay
+          autoPlaySpeed={5000}
+          customTransition="all 1s"
+          transitionDuration={1000}
+          responsive={responsive}
+          renderButtonGroupOutside={true}
+          customButtonGroup={<CustomArrows />}
+          arrows={false}
+          className="inner"
+        >
+          {amenities.map((item, index) => {
+            return (
+                <div key={index}>
+                    <img src={item.image} alt={item?.descripiton} sizes='90vw'/>
+                </div>
+            );
+          })}
+        </Carousel>
+      </section>
     )
 }
 

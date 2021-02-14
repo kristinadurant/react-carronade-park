@@ -32,8 +32,12 @@ const Gallery = () => {
                 <SRLWrapper options={options}>
                     {images.map(( image ) => {
                         return (
-                            <a key={image.id} href={image.url}>
-                                <img src={image.url} alt={image.description} />
+                            <a key={image.id} href={require(`../assets/images/amenities/${image.src}`).default}>
+                                <img 
+                                    src={require(`../assets/images/amenities/${image.src}`).default} alt={image.description} 
+                                    loading="lazy"
+                                    width="1620px" height="1080px"
+                                />
                             </a>
                         )}
                     )}

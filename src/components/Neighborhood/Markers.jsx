@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react';
 import { Popup, Marker } from 'react-mapbox-gl';
 import maps from '../../data/Neighborhood';
 import Distance from './Distance';
+import { TabContext } from '../../context/TabContext';
 
-const Markers = ({ category }) => {
+const Markers = () => {
+    const { tab } = useContext(TabContext);
     const [selected, setSelected] = useState(null);
 
     useEffect(() => {
@@ -16,7 +18,7 @@ const Markers = ({ category }) => {
     
     return (
         <>
-        { maps[category].markers.map( marker  => (
+        { maps[tab]?.markers.map( marker  => (
             <Marker 
                 key={marker.name}
                 coordinates={marker.coordinates}

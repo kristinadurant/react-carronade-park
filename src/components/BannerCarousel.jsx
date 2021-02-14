@@ -33,7 +33,7 @@ const BannerCarousel = () => {
           {images.map((item, index) => {
             return (
                 <div key={index}>
-                    <img src={item.url} alt="Carronade Park Apartments"/>
+                    <img src={require(`../assets/images/amenities/${item.src}`).default} alt={item.description} width="1620px" height="1080px"/>
                 </div>
             );
           })}

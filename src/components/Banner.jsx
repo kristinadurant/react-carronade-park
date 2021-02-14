@@ -7,7 +7,7 @@ const Banner = ({ text, image }) => {
         <section className="banner">
             <div className="banner-carousel-container">
                 {image 
-                ? <img src={image} alt="Carronade Park Apartments"/>
+                ? <img src={image} alt="Carronade Park Apartments" width="1620px" height="1080px"/>
                 : <BannerCarousel />
                 }
             </div>

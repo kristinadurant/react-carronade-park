@@ -37,6 +37,7 @@ body {
 }
 img {
   max-width: 100%;
+  height: auto;
 }
 ul {
   list-style: none;
@@ -118,7 +119,7 @@ p {
 }
 section.intro p {
   font-size: 1.1rem;
-  color: #999;
+  color: #666;
 }
 /*=============================
     HEADER
@@ -446,14 +447,15 @@ section.bg-grey.carousel {
 .carousel .react-multi-carousel-dot-list {
   bottom: 4%;
 }
-.carousel .react-multi-carousel-dot button {
-  border-color: black;
+.react-multi-carousel-dot-list .react-multi-carousel-dot button {
+  border-color: #242f38;
+  border-width: 1px;
   background-color: white;
   height: 0.8rem;
   width: 0.8rem;
 }
-.carousel .react-multi-carousel-dot:hover button,
-.carousel .react-multi-carousel-dot--active button {
+.react-multi-carousel-dot-list .react-multi-carousel-dot:hover button,
+.react-multi-carousel-dot-list .react-multi-carousel-dot--active button {
   background-color: #242f38;
 }
 .carousel .next,
@@ -461,12 +463,12 @@ section.bg-grey.carousel {
 .map-carousel .react-multiple-carousel__arrow::before {
   padding: 0 0.5em;
   color: #242f38;
-  font-size: 3em;
+  font-size: 2.5em;
   font-family: revicons;
 }
 .carousel .next,
 .carousel .previous {
-  top: calc(50% - 1.5rem);
+  top: calc(50% - 1.25rem);
   line-height: 1;
   position: absolute;
 }
@@ -585,6 +587,11 @@ div.SRLPrevButton::before {
 #neighborhood-page .tabs {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+#neighborhood-page .tabs li {
+  width: 16%;
+  display: block;
 }
 #neighborhood-page .tabs button {
   padding: 0.5em;
@@ -599,7 +606,8 @@ div.SRLPrevButton::before {
   color: transparent;
   transition: 500ms;
 }
-#neighborhood-page .tabs button:hover * {
+#neighborhood-page .tabs button:hover *,
+#neighborhood-page .tabs button.active * {
   color: #10c778;
 }
 .map-container {
@@ -618,11 +626,14 @@ div.SRLPrevButton::before {
   height: 100%;
   margin: auto;
 }
-.map-carousel li.react-multi-carousel-item p:first-of-type {
+.map-carousel li.react-multi-carousel-item .title a {
   font-family: "Source Sans Pro", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.1em;
+}
+.map-carousel li.react-multi-carousel-item .title a:hover {
+  color: #10c778;
 }
 .distance span {
   margin: 2em 0.5em 0;
@@ -687,7 +698,6 @@ button.marker:hover {
   font-weight: bold;
   letter-spacing: 0.1em;
   font-size: 1rem;
-  text-decoration: underline;
 }
 .mapboxgl-popup-content .title + p {
   width: 90%;

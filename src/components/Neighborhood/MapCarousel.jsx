@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { TabContext } from '../../context/TabContext';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import Distance from './Distance';
+import { Distance } from '../Neighborhood';
+import maps from '../../data/Neighborhood';
 
 const responsive = {
   desktop: {
@@ -21,9 +23,11 @@ const responsive = {
   }
 };
 
-const MapCarousel = ({ markers }) => {
+const MapCarousel = () => {
+  const { tab } = useContext(TabContext);
 
-  return (
+  return tab && (
+    <section style={{maxWidth: '100%', margin: 'auto'}}>
       <Carousel
         showDots
         keyBoardControl
@@ -35,16 +39,21 @@ const MapCarousel = ({ markers }) => {
         responsive={responsive}
         containerClass="map-carousel"
       >
-        {markers.map((marker, index) => {
+        {maps[tab].markers.map((marker, index) => {
           return (
               <div key={index}>
-                <p>{marker.name}</p>
+                <p className="title">
+                  <a href={marker.google_url} rel='noreferrer' target='_blank'>
+                    {marker.name}
+                  </a>
+                </p>
                 <p>{marker.description}</p>
                 <Distance distance={marker.distance} walk={marker.walk} bike={marker.bike} car={marker.car} />
               </div>
           );
         })}
       </Carousel>
+    </section>
   );
 };
 
