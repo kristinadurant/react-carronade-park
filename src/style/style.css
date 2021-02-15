@@ -128,6 +128,7 @@ header {
   width: 100%;
   background-color: #ffffffc7;
   z-index: 1001;
+  top: 0;
 }
 .logo span {
   color: #242f38;
@@ -705,7 +706,7 @@ button.marker:hover {
 /*=============================
     SCHEDULE A TOUR
   ==============================*/
-#schedule-tour h1 {
+#tour-form h1 {
   padding: 20% 0 5%;
   background-color: inherit;
   color: inherit;
@@ -787,11 +788,15 @@ label.required::after {
   color: red;
 }
 .success-form {
-  min-height: 60vh;
   display: flex;
-  align-items: center;
-  flex-direction: column;
   justify-content: center;
+}
+.success-form div {
+  background: #0fc7789c;
+  padding: 5%;
+}
+.success-form div * {
+  color: #fff;
 }
 /*=============================
     RESPONSIVE DESIGN

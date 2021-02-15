@@ -35,7 +35,7 @@ const Markers = () => {
                 </button>
                 }
                 </Spring>
-                <Spring from={{ opacity: 0}} to={{opacity: 1}}  >
+                <Spring from={{ opacity: 0}} to={{opacity: 1}}>
                     {props => <p style={props}>{marker.name}</p>}
                 </Spring>
                 

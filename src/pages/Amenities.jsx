@@ -8,16 +8,18 @@ const Amenities = () => {
 
     return (
         <main id="amenities-page">
+            
             <Banner text={'Modern Amenities'} image={'https://res.cloudinary.com/carronadepark/image/upload/v1611285586/Gallery/IMG_1654_Large_wey2ri.jpg'}/>
+            
             <section className="inner intro">
                 <p>Carronade park homes come fully equipped with all of the modern upgrades 
                 you would expect in a five star community. We take it to the next level 
                 with maintenance free exclusive amenities for all residents to enjoy and 
                 share with friends and family.</p>
-            </section>
-            <section className="carousel bg-grey">    
-                <AmenitiesCarousel />
-            </section>
+            </section>   
+            
+            <AmenitiesCarousel />
+
             <section className="amenities-list inner-wide">
                 {ulTitle.map((item, index) => {
                     return (      
