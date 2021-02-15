@@ -12,7 +12,7 @@ const ScheduleTour = () => {
         event.preventDefault();
         setLoading(true);
         try {
-            // sendEmail(event);
+            sendEmail(event);
             form.reset();
             setSuccess(true);
         } catch(err) {
