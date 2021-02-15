@@ -181,9 +181,6 @@ header .mobile-menu {
   right: 0;
   background: #fffffff5;
   z-index: 100;
-}
-header .mobile-menu nav {
-  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -314,7 +311,7 @@ footer .social a:hover {
   background-repeat: no-repeat;
   background-position: center;
 }
-#home-page-blocks > div:last-child {
+#home-page-blocks div.background-image:last-child {
   margin-right: 0;
 }
 #home-page-blocks .title {
@@ -331,7 +328,7 @@ footer .social a:hover {
   font-weight: bold;
   letter-spacing: 0.1em;
 }
-#home-page-blocks a:hover {
+#home-page-blocks .title:hover {
   color: #10c778;
   background-color: transparent;
 }
@@ -820,7 +817,7 @@ label.required::after {
     font-size: 1rem;
     line-height: 1.8em;
   }
-  #home-page-blocks a {
+  #home-page-blocks .title {
     font-size: 1rem;
   }
   footer p:first-of-type {
@@ -904,10 +901,8 @@ label.required::after {
     font-size: 1.75rem;
   }
   #home-page-blocks .title {
-    padding: 3% 0;
-  }
-  #home-page-blocks a {
     font-size: 0.875rem;
+    padding: 3% 0;
   }
   #floor-plans-blocks.inner {
     width: 90%;
@@ -928,8 +923,6 @@ label.required::after {
   }
   #home-page-blocks .title {
     padding: 2% 0;
-  }
-  #home-page-blocks a {
     font-size: 0.75rem;
   }
   footer p:first-of-type {
@@ -997,7 +990,7 @@ label.required::after {
   section.home-page-blocks {
     width: 100%;
   }
-  #home-page-blocks > div {
+  #home-page-blocks div.background-image {
     width: 32.5%;
     height: 32vw;
     margin-right: 1%;
@@ -1007,8 +1000,8 @@ label.required::after {
     width: 92%;
     left: 4%;
     padding: 0;
+    font-size: 0.675rem;
   }
-  #home-page-blocks a,
   .button {
     font-size: 0.675rem;
   }
