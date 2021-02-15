@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import sendEmail from '../emailjs';
-import Success from '../components/ScheduleTour/Success';
+import { InputRadio, InputCheckbox, Success } from '../components/ScheduleTour';
 import { Spring, config } from 'react-spring/renderprops';
 
 const ScheduleTour = () => {
@@ -64,123 +64,28 @@ const ScheduleTour = () => {
                                 
                                 <div className="survey">
                                     <h2>To better serve you, please take a moment to fill out our <u>optional survey.</u></h2>
-                                            
-                                    <fieldset className="two-columns">                             
-                                        <legend>I am interested in the following features:</legend>
-                                        <div>
-                                            <input type='checkbox' id='bed_2' name='bed_2' value='2 Bedrooms'/>
-                                            <label htmlFor='bed_2'>2 Bedrooms</label>
-                                        </div>
-                                        <div>
-                                            <input type='checkbox' id='bath_1' name='bath_1' value='1 Bath'/>
-                                            <label htmlFor='bath_1'>1 Bath</label>
-                                        </div>
-                                        <div>
-                                            <input type='checkbox' id='bath_2' name='bath_2' value='2 Baths'/>   
-                                            <label htmlFor='bath_2'>2 Baths</label>
-                                        </div>
-                                        <div>
-                                            <input type='checkbox' id='lease_1_6' name='lease_1_6_months' value='Lease Period: 1-6 Months'/>   
-                                            <label htmlFor='lease_1_6'>Lease Period: 1-6 Months</label>
-                                        </div>
-                                        <div>
-                                            <input type='checkbox' id='lease_6_12' name='lease_6_12_months' value='Lease Period: 6-12 Months'/>   
-                                            <label htmlFor='lease_6_12'>Lease Period: 6-12 Months</label>
-                                        </div>                           
-                                        <div>
-                                            <input type='checkbox' id='lease_year' name='lease_year_or_more' value='Lease Period: 1 Year +'/>   
-                                            <label htmlFor='lease_year'>Lease Period: 1 Year +</label> 
-                                        </div>
-                                    </fieldset> 
-
-                                    <fieldset className="one_column">
-                                        <legend>I am relocating into the area: </legend>
-                                        <div>
-                                            <input type='radio' id='relocating_yes' name='relocating' value="yes"/>
-                                            <label htmlFor='relocating_yes'>
-                                                <span className="hide">Relocation into the area </span>Yes
-                                            </label>
-                                        </div>
-                                        <div>
-                                            <input type='radio' id='relocating_no' name='relocating' value='no'/>
-                                            <label htmlFor='relocating_no'>
-                                                <span className="hide">Relocation into the area </span>No
-                                            </label>
-                                        </div>
-                                    </fieldset>  
-
-                                    <fieldset className="one_column">
-                                        <legend>I have a dog:</legend>
-                                        <div>
-                                            <input type='radio' id='dog_yes' name='dog' value='yes' />
-                                            <label htmlFor='dog_yes'><span className="hide">Dog </span>Yes</label>
-                                        </div>
-                                        <div>
-                                            <input type='radio' id='dog_no' name='dog' value='no' />
-                                            <label htmlFor='dog_no'><span className="hide">Dog </span>No</label>
-                                        </div>
-                                    </fieldset>
-                                    <fieldset className="one_column">
-                                        <legend>I have a cat:</legend>
-                                        <div>
-                                            <input type='radio' id='cat_yes' name='cat' value='yes' />
-                                            <label htmlFor='cat_yes'><span className="hide">Cat </span>Yes</label>
-                                        </div>
-                                        <div>
-                                            <input type='radio' id='cat_no' name='cat' value='no' />
-                                            <label htmlFor='cat_no'><span className="hide">Cat </span>No</label>
-                                        </div>
-                                    </fieldset>
-                                    <fieldset className="two-columns">
-                                        <legend>I am interested in moving:</legend>
-                                        <div>    
-                                            <input type='radio' id='immediately' name='time_moving' value='immediately'/>
-                                            <label htmlFor='immediately'>
-                                                <span className="hide">Moving </span>Immediately
-                                            </label>
-                                        </div>
-                                        <div>
-                                            <input type='radio' id='month_1' name='time_moving' value='in 1 Month'/>
-                                            <label htmlFor='month_1'>
-                                                <span className="hide">Moving </span>in 1 Month
-                                            </label>
-                                        </div>
-                                        <div>
-                                            <input type='radio' id='months_2_3' name='time_moving' value='in 2-3 Months'/>
-                                            <label htmlFor='months_2_3'>
-                                                <span className="hide">Moving </span>in 2-3 Months
-                                            </label>
-                                        </div>
-                                        <div>
-                                            <input type='radio' id='months_2_3' name='time_moving' value='in 4-6 Months' />
-                                            <label htmlFor='months_4_6'>
-                                                <span className="hide">Moving </span>in 4-6 Months
-                                            </label>
-                                        </div>
-                                        <div>
-                                            <input type='radio' id='months_2_3' name='time_moving' value='in 7-9 Months' />
-                                            <label htmlFor='months_7_9'>
-                                                <span className="hide">Moving </span>in 7-9 Months
-                                            </label>
-                                        </div>    
-                                        <div>
-                                            <input type='radio' id='months_10' name='time_moving' value='in 10 Months or More' />
-                                            <label htmlFor='months_10'>
-                                                <span className="hide">Moving </span>in 10 Months or More
-                                            </label>
-                                        </div>
-                                    </fieldset>
-                                    <fieldset className="one-column">
-                                        <legend>Present residence:</legend>
-                                        <div>
-                                            <input type='radio' id='rent' name='present_residence' value='rent'/>
-                                            <label htmlFor='rent'>Rent</label>
-                                        </div>
-                                        <div>
-                                            <input type='radio' id='own' name='present_residence' value='own' />
-                                            <label htmlFor='own'>Own</label>
-                                        </div>
-                                    </fieldset>         
+                                    
+                                    <InputCheckbox 
+                                        customClass='two-columns'
+                                        legend='I am interested in the following features'
+                                        values={[
+                                            { value: '2 Bedrooms', name: 'bed_2'},
+                                            { value: '1 Bath', name: 'bath_1'},
+                                            { value: '2 Baths', name: 'bath_2'},
+                                            { value: 'Lease Period: 1-6 Months', name: 'lease_1_6_months'},
+                                            { value: 'Lease Period: 6-12 Months', name: 'lease_6_12_months'},
+                                            { value: 'Lease Period: 1 Year +', name: 'lease_year_or_more'},
+                                        ]}
+                                    />
+                                    <InputRadio legend='I am relocating into the area' name='relocating' values={['Yes', 'No']} />
+                                    <InputRadio legend='I have a dog' name='dog' values={['Yes', 'No']} />
+                                    <InputRadio legend='I have a cat' name='cat' values={['Yes', 'No']} />
+                                    <InputRadio 
+                                        customClass='two-columns'
+                                        legend='I am interested in moving' name='time_moving' 
+                                        values={['Immediately', 'In 1 Month', 'In 2-3 Months', 'In 4-6 Months', 'In 7-9 Months', 'In 10 Months or More']} 
+                                    />
+                                    <InputRadio legend='Present residence' name='present_residence' values={['Rent', 'Own']} />        
                                 </div>                                                  
                                 <button className="button" disabled={loading}>Schedule a Tour</button>                
                             </form>

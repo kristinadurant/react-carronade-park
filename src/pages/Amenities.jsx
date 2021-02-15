@@ -1,7 +1,8 @@
 import React from 'react';
-import AmenitiesCarousel from '../components/AmenitiesCarousel';
+import Carousel from '../components/Carousel';
 import Banner from '../components/Banner';
 import amenitiesList from '../data/AmenitiesList';
+import amenities from '../data/AmenitiesGallery';
 
 const Amenities = () => {
     const ulTitle = Object.keys(amenitiesList);
@@ -18,24 +19,20 @@ const Amenities = () => {
                 share with friends and family.</p>
             </section>   
             
-            <AmenitiesCarousel />
+            <Carousel images={amenities}/>
 
             <section className="amenities-list inner-wide">
                 {ulTitle.map((item, index) => {
                     return (      
-                        <>
                         <div key={index}>
                             <h2 className="title">{item}</h2>
                             <ul>
                                 {amenitiesList[item].map((item, index) => {
                                 return (
-                                        <li key={index}>
-                                            <span>-</span>{item}
-                                        </li>
+                                        <li key={index}><span>-</span>{item}</li>
                                 )})}
                             </ul>
                         </div>
-                        </>
                     )})}
             </section>
         </main>

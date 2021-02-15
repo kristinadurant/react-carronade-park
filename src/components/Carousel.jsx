@@ -1,7 +1,6 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import amenities from '../data/AmenitiesGallery';
 
 const responsive = {
   desktop: {
@@ -22,8 +21,7 @@ const responsive = {
 };
 const CustomArrows = ({ next, previous, ...rest }) => {
   const {
-    onMove,
-    carouselState: { currentSlide, deviceType }
+    carouselState: { currentSlide }
   } = rest;
   return (
     <>
@@ -36,7 +34,7 @@ const CustomArrows = ({ next, previous, ...rest }) => {
     </>
   );
 };
-const AmenitiesCarousel = () => {
+const AmenitiesCarousel = ({ images }) => {
 
     return (
       <section className="carousel bg-grey">
@@ -56,7 +54,7 @@ const AmenitiesCarousel = () => {
           arrows={false}
           className="inner"
         >
-          {amenities.map((item, index) => {
+          {images.map((item, index) => {
             return (
                 <div key={index}>
                     <img src={item.image} alt={item?.descripiton} sizes='90vw'/>

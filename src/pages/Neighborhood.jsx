@@ -1,8 +1,9 @@
 import React from 'react';
 import Banner from '../components/Banner';
-import AmenitiesCarousel from '../components/AmenitiesCarousel';
+import Carousel from '../components/Carousel';
 import { Tabs, Map, MapCarousel } from '../components/Neighborhood';
 import { TabContextProvider } from '../context/TabContext';
+import amenities from '../data/AmenitiesGallery';
 
 const Neighborhood = () => {
 
@@ -18,7 +19,7 @@ const Neighborhood = () => {
                     providing easy access to major interstates. Look no further for Perrysburg apartments, your new location to call Home</p>
             </section>
 
-            <AmenitiesCarousel />
+            <Carousel images={amenities}/>
 
             <section className="inner-wide map">
                 <Tabs />

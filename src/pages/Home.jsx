@@ -8,7 +8,9 @@ const Home = () => {
 
     return (
         <main id="home-page">
+
             <Banner text={'Carronade Park Townhomes'} />
+
             <animated.section style={props} className="inner intro">
                 <p>Perrysburg, Ohio is a suburb of Toledo with a population of about 20,600. 
                 At the intersection of I-75 and I-475, Perrysburg is a prime location for commuting outside 
@@ -52,6 +54,7 @@ const Home = () => {
                     </Link>
                 </div>
             </section>
+            
         </main>
     )
 }
