@@ -1,5 +1,6 @@
 {
-  "name": "client",
+  "name": "Carronade Park Townhomes",
+  "homepage": "http://carronadepark.com",
   "version": "0.1.0",
   "main": "index.js",
   "dependencies": {
