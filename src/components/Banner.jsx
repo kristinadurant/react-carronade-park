@@ -12,10 +12,10 @@ const Banner = ({ text, image }) => {
                 }
             </div>
             <div className="banner-text">
-                <HashLink smooth to='#main' id='main'>
+                <HashLink smooth to='#main'>
                     <span className='hide'>scroll to main content</span>
                 </HashLink>
-                <h1>{text}</h1>
+                <h1 id='main'>{text}</h1>
             </div>  
          </section>
     )

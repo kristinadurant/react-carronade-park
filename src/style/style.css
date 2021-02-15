@@ -207,7 +207,7 @@ header .mobile-menu .close {
   ==============================*/
 footer {
   background-color: #242f38;
-  padding: 7% 0 2%;
+  padding: 7% 2% 2%;
   margin-top: 10%;
 }
 footer * {
@@ -325,12 +325,6 @@ footer .social a:hover {
   width: 70%;
   left: 15%;
   padding: 5% 0;
-}
-i.fa-angle-double-right {
-  color: #10c778;
-  margin-right: 0.2em;
-}
-#home-page-blocks a {
   font-size: 1.25rem;
   font-family: "Source Sans Pro", sans-serif;
   text-transform: uppercase;
@@ -339,6 +333,7 @@ i.fa-angle-double-right {
 }
 #home-page-blocks a:hover {
   color: #10c778;
+  background-color: transparent;
 }
 /*=============================
     FLOOR PLANS
@@ -596,6 +591,8 @@ div.SRLPrevButton::before {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.1em;
+  display: inline-block;
+  overflow: hidden;
 }
 #neighborhood-page .tabs button i {
   color: transparent;

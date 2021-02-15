@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import sendEmail from '../emailjs';
-import { InputRadio, InputCheckbox, Success } from '../components/ScheduleTour';
+import { InputRadio, InputCheckbox, InputText, Success } from '../components/ScheduleTour';
 import { Spring, config } from 'react-spring/renderprops';
 
 const ScheduleTour = () => {
@@ -29,42 +29,33 @@ const ScheduleTour = () => {
                     <Spring from={{ opacity: 0}} to={{opacity: 1}} config={config.slow}>
                         {props => 
                             <form onSubmit={handleSubmit} style={props}>
-                                <div>
-                                    <label htmlFor='name' className='required' >Name:</label>
-                                    <input type='text' id='name' name='name' required autoFocus/>
-                                </div>
-                                <div>
-                                    <label htmlFor='email' className='required'>Email Address:</label>
-                                    <input type='email' id='email' name='email' required/>
-                                </div>
+                                <InputText 
+                                    type='text' name='name' label='Name'
+                                    required autoFocus
+                                />
+                                <InputText 
+                                    type='email' name='email' label='Email Address'
+                                    required
+                                />
                                 <fieldset className='two-columns'>
-                                    <div>
-                                        <label htmlFor='home_phone' className='required'>Home Phone:</label>
-                                        <input 
-                                            type='tel' id='home_phone' name='home_phone' 
-                                            pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$" required
-                                        />
-                                    </div>
-                                    <div>
-                                        <label htmlFor='work_phone'>Work Phone:</label>
-                                        <input 
-                                            type='tel' id='work_phone' name='work_phone'
-                                            pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$"
-                                        />
-                                    </div>
+                                    <InputText 
+                                        type='tel' name='home_phone' label='Home Phone'
+                                        required
+                                        pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$"
+                                    />
+                                    <InputText 
+                                        type='tel' name='work' label='Work Phone'
+                                        pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$"
+                                    />
                                 </fieldset>
-                                <div>
-                                    <label htmlFor='source'>How did you learn about our site:</label>
-                                    <input type='text' id='source' name='source'/>
-                                </div>
+                                <InputText type='text' name='source' label='How did you learn about our site'/>
                                 <div>
                                     <label htmlFor='comments' className='required'>Questions/Comments:</label>
                                     <textarea id='comments' name='comments' rows="4" required/>
                                 </div>
                                 
                                 <div className="survey">
-                                    <h2>To better serve you, please take a moment to fill out our <u>optional survey.</u></h2>
-                                    
+                                    <h2>To better serve you, please take a moment to fill out our <u>optional survey.</u></h2>                                   
                                     <InputCheckbox 
                                         customClass='two-columns'
                                         legend='I am interested in the following features'
@@ -86,8 +77,11 @@ const ScheduleTour = () => {
                                         values={['Immediately', 'In 1 Month', 'In 2-3 Months', 'In 4-6 Months', 'In 7-9 Months', 'In 10 Months or More']} 
                                     />
                                     <InputRadio legend='Present residence' name='present_residence' values={['Rent', 'Own']} />        
-                                </div>                                                  
-                                <button className="button" disabled={loading}>Schedule a Tour</button>                
+                                </div>  
+
+
+                                <button className="button" disabled={loading}>Schedule a Tour</button>      
+
                             </form>
                         }
                     </Spring>
