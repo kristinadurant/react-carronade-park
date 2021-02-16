@@ -3,7 +3,7 @@ import React, { createContext, useState } from 'react';
 const TabContext = createContext({});
 
 const TabContextProvider = ({ children }) => {
-  const [tab, setTab] = useState(null);
+  const [tab, setTab] = useState('Shopping');
 
   return (
     <TabContext.Provider value={{ tab, setTab }}>

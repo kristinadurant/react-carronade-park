@@ -21,7 +21,7 @@ const Markers = () => {
     //removing selected marker on tab change
 
     
-    return tab && (
+    return (
         <>
         { maps[tab].markers.map( marker  => (           
             <Marker 
@@ -43,7 +43,7 @@ const Markers = () => {
         ))}
 
         {selected && 
-            <Popup coordinates={selected.coordinates} className='mobile-hide'>
+            <Popup coordinates={selected.coordinates} className='popup'>
                 <button className="close" onClick={() => setSelected(null)}>
                     &times;
                     <span className='hide'>close popup</span>

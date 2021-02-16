@@ -96,6 +96,9 @@ section.intro {
 main {
   min-height: 70vh;
 }
+.small-show {
+  display: none;
+}
 /*=============================
     TYPOGRAPHY
 ==============================*/
@@ -120,7 +123,7 @@ section.intro p {
 /*=============================
     HEADER
   ==============================*/
-.mobile-show {
+.medium-show {
   display: none;
 }
 header {
@@ -787,8 +790,6 @@ label.required::after {
   }
   .banner-text h1 {
     font-size: 2rem;
-    // line-height: 3.5em;
-    // height: 3.5em;
   }
   .banner-text a {
     width: 2.5rem;
@@ -869,10 +870,10 @@ label.required::after {
   #neighborhood-page .tabs li {
     width: auto;
   }
-  .mobile-show {
+  .medium-show {
     display: block;
   }
-  header.mobile-show {
+  header.medium-show {
     position: fixed;
     top: 0;
     background-color: #fff;
@@ -880,7 +881,7 @@ label.required::after {
   div#root {
     padding-top: 50px;
   }
-  .mobile-hide {
+  .desktop-show {
     display: none;
   }
   .banner-text h1 {
@@ -1000,6 +1001,9 @@ label.required::after {
   }
   .gallery div a {
     width: 49.8%;
+  }
+  .map .popup {
+    display: none;
   }
   #tour-form form {
     background-color: transparent;

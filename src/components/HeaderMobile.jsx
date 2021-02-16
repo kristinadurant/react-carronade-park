@@ -5,7 +5,7 @@ const HeaderMobile = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="mobile-show">
+        <header className="medium-show">
             <div className="inner-wide">
                 <Link to='/' className="logo">
                     <span>Carronade Park</span>

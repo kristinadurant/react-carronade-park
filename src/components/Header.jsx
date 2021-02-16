@@ -21,7 +21,7 @@ const Header = () => {
     return (
         <Spring from={{marginTop: -50}} to={{marginTop: 0}} reset={true} reverse={reverse}>
             {props =>
-        <header style={props} className='mobile-hide'>
+        <header style={props} className='desktop-show'>
             <div className="inner-wide">
                 <Link to='/' className="logo">
                     <span>Carronade Park</span>

@@ -8,7 +8,7 @@ const Tabs = () => {
 
     return (
         <>
-        <h2 className='mobile-show'>{tab}</h2>
+        <h2 className='small-show'>{tab}</h2>
         <ul className="tabs">
             {categories.map((item) => (
                 <li key={item}>

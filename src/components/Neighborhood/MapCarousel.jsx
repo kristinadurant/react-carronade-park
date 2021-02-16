@@ -4,7 +4,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Distance } from '../Neighborhood';
 import maps from '../../data/Neighborhood';
-
+import { Spring } from 'react-spring/renderprops';
 
 const responsive = {
   desktop: {
@@ -27,34 +27,38 @@ const responsive = {
 const MapCarousel = () => {
   const { tab } = useContext(TabContext);
 
-  return tab && (
-    <section style={{maxWidth: '100%', margin: 'auto'}}>
-      <Carousel
-        showDots
-        keyBoardControl
-        infinite
-        autoPlay
-        autoPlaySpeed={3000}
-        customTransition="all 1s"
-        transitionDuration={1000}
-        responsive={responsive}
-        containerClass="map-carousel"
-      >
-        {maps[tab].markers.map((marker, index) => {
-          return (
-              <div key={index}>
-                <p className="title">
-                  <a href={marker.google_url} rel='noreferrer' target='_blank'>
-                    {marker.name}
-                  </a>
-                </p>
-                <p>{marker.description}</p>
-                <Distance distance={marker.distance} walk={marker.walk} bike={marker.bike} car={marker.car} />
-              </div>
-          );
-        })}
-      </Carousel>
-    </section>
+  return (
+    <Spring from={{ paddingTop: 350}} to={{paddingTop: 0}} reset={true} delay={1000}>
+      {props =>
+      <section style={{...props, maxWidth: '100%', margin: 'auto', overflow: 'hidden', height: '350px'}}>
+        <Carousel
+          showDots
+          keyBoardControl
+          infinite
+          autoPlay
+          autoPlaySpeed={5000}
+          customTransition="all 1s"
+          transitionDuration={1000}
+          responsive={responsive}
+          containerClass="map-carousel"
+        >
+          {maps[tab].markers.map((marker, index) => {
+            return (
+                <div key={index}>
+                  <p className="title">
+                    <a href={marker.google_url} rel='noreferrer' target='_blank'>
+                      {marker.name}
+                    </a>
+                  </p>
+                  <p>{marker.description}</p>
+                  <Distance distance={marker.distance} walk={marker.walk} bike={marker.bike} car={marker.car} />
+                </div>
+            );
+          })}
+        </Carousel>
+      </section>
+    }
+    </Spring>
   );
 };
 
