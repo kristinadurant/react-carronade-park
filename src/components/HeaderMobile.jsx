@@ -11,7 +11,7 @@ const HeaderMobile = () => {
                     <span>Carronade Park</span>
                 </Link>
                 <button onClick={() => setOpen(true)} className='open-menu'>
-                    <i class="fas fa-bars"></i>
+                    <i className="fas fa-bars"></i>
                     <span className='hide'>Open menu</span>
                 </button>
 
